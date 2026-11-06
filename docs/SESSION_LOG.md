@@ -25,3 +25,8 @@
 - Added ~40 display-name fixes, validation (no duplicates, no missing bbox) and `data/catalog_report.txt`.
 - Updated `isro.html` for schema v2 (adds 'Whole state' option in the picker).
 - **Next:** owner's local/live test of `isro.html` (Phase 0 result), then Phase 2 (real layer module).
+
+## Session 3: 2026-11-06
+- Owner deployed to GitHub Pages (pievenus/isro-visualiser, Actions-based static.yml). Phase 0 result: tiles display (coloured Nalgonda layer confirmed by screenshot); GetLegendGraphic via <img> works (376x1020); fetch() of GetFeatureInfo/GetMap/legend FAILS (CORS/network) -> D6 applies.
+- Wrote `index.html` (real app: state/district pickers default Thiruvananthapuram, opacity, legend, click inspector via proxy, URL hash state, attribution, vintage note) and `supabase/functions/bhuvan-info/index.ts` (GetFeatureInfo-only CORS proxy, origin locked to https://pievenus.github.io).
+- Not yet tested live. Proxy not yet deployed.

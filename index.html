@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ISRO Visualiser: Land Use / Land Cover</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@9.2.4/ol.css">
+<style>
+  :root { --bg:#fff; --fg:#1a1a1a; --muted:#666; --panel:#f4f4f5; --line:#d4d4d8; --bad:#b91c1c; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#111; --fg:#eee; --muted:#9ca3af; --panel:#1c1c1f; --line:#3f3f46; --bad:#f87171; } }
+  * { box-sizing:border-box; }
+  html, body { height:100%; margin:0; background:var(--bg); color:var(--fg); font:14px/1.4 system-ui, sans-serif; }
+  body { display:flex; flex-direction:column; }
+  header { padding:8px 12px; background:var(--panel); border-bottom:1px solid var(--line); display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; }
+  header h1 { font-size:15px; margin:0; }
+  select, input { font:inherit; color:var(--fg); background:var(--bg); border:1px solid var(--line); border-radius:6px; padding:4px 8px; }
+  main { flex:1; display:flex; min-height:0; }
+  #mapwrap { flex:1; min-width:0; position:relative; }
+  #map { position:absolute; inset:0; }
+  .attr { position:absolute; left:6px; bottom:6px; background:rgba(255,255,255,.88); color:#222; padding:2px 6px; font-size:11px; border-radius:4px; z-index:5; max-width:90%; }
+  #status { position:absolute; right:8px; top:8px; background:var(--panel); border:1px solid var(--line); padding:3px 8px; border-radius:6px; font-size:12px; z-index:5; display:none; }
+  aside { width:360px; max-width:45%; border-left:1px solid var(--line); background:var(--panel); overflow:auto; padding:10px; }
+  aside h2 { font-size:13px; margin:12px 0 6px; } aside h2:first-child { margin-top:0; }
+  #info { white-space:pre-wrap; word-break:break-word; font:12px/1.45 ui-monospace, Menlo, Consolas, monospace; }
+  #legend { max-width:100%; background:#fff; border:1px solid var(--line); border-radius:4px; }
+  .muted { color:var(--muted); font-size:12px; } .bad { color:var(--bad); }
+  @media (max-width:700px) { main { flex-direction:column; } aside { width:100%; max-width:none; height:42%; border-left:0; border-top:1px solid var(--line); } }
+</style>
+</head>
+<body>
+<header>
+  <h1>ISRO Visualiser: Land Use / Land Cover</h1>
+  <label>State <select id="state"></select></label>
+  <label>District <select id="district"></select></label>
+  <label>Opacity <input id="opacity" type="range" min="0" max="1" step="0.05" value="0.8"></label>
+</header>
+<main>
+  <div id="mapwrap"><div id="map"></div><div id="status">Loading Bhuvan tiles…</div>
+    <div class="attr">Bhuvan, National Remote Sensing Centre, ISRO, Government of India | &copy; OpenStreetMap contributors</div></div>
+  <aside>
+    <h2>Clicked location</h2>
+    <div id="info" class="muted">Click the map to see the land-cover class.</div>
+    <h2>Legend</h2>
+    <img id="legend" alt="Land cover legend" loading="lazy">
+    <h2>About this data</h2>
+    <p class="muted" id="vintage"></p>
+  </aside>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/ol@9.2.4/dist/ol.js"></script>
+<script>
+(function () {
+  "use strict";
+  // Set this to your Supabase edge function URL once deployed (see docs/HANDOFF.md).
+  var PROXY = "https://YOUR-PROJECT.supabase.co/functions/v1/bhuvan-info";
+
+  var $ = function (id) { return document.getElementById(id); };
+  var catalog, items = [], current = null, source = null, layer = null, pending = 0;
+  var stateSel = $("state"), distSel = $("district"), statusEl = $("status"), infoEl = $("info");
+
+  var map = new ol.Map({
+    target: "map",
+    layers: [new ol.layer.Tile({ source: new ol.source.OSM({ attributions: [] }) })],
+    view: new ol.View({ center: ol.proj.fromLonLat([76.95, 8.5]), zoom: 9 }),
+    controls: ol.control.defaults.defaults({ attribution: false })
+  });
+
+  function readHash() { return new URLSearchParams(location.hash.slice(1)); }
+  function writeHash() {
+    if (!current) return;
+    var p = new URLSearchParams({ layer: current.layer, o: $("opacity").value });
+    history.replaceState(null, "", "#" + p.toString());
+  }
+
+  function setLayer(it, fit) {
+    current = it;
+    if (layer) map.removeLayer(layer);
+    source = new ol.source.TileWMS({
+      url: catalog.wms_url, serverType: "geoserver", transition: 0,
+      params: { LAYERS: it.layer, VERSION: "1.1.1", FORMAT: "image/png", TRANSPARENT: true, TILED: true }
+    });
+    source.on("tileloadstart", function () { pending++; statusEl.style.display = "block"; statusEl.textContent = "Loading Bhuvan tiles…"; });
+    function done(failed) { pending = Math.max(0, pending - 1); if (failed) { statusEl.style.display = "block"; statusEl.textContent = "Some tiles failed (Bhuvan may be slow)"; } else if (!pending) statusEl.style.display = "none"; }
+    source.on("tileloadend", function () { done(false); });
+    source.on("tileloaderror", function () { done(true); });
+    layer = new ol.layer.Tile({ source: source, opacity: parseFloat($("opacity").value) });
+    map.addLayer(layer);
+    $("legend").src = catalog.legend_url_template.replace("{layer}", encodeURIComponent(it.layer));
+    infoEl.className = "muted"; infoEl.textContent = "Click the map to see the land-cover class.";
+    if (fit && it.bbox) map.getView().fit(ol.proj.transformExtent(it.bbox, "EPSG:4326", "EPSG:3857"), { padding: [20, 20, 20, 20], duration: 300 });
+    writeHash();
+  }
+
+  function fillItems(preferLayer) {
+    var st = catalog.states[stateSel.value];
+    items = st.state_layers.map(function (sl) { return { display: "Whole state" + (sl.label ? ": " + sl.label : ""), layer: sl.layer, bbox: sl.bbox }; })
+      .concat(st.districts.map(function (d) { return { display: d.display, layer: d.layer, bbox: d.bbox }; }));
+    distSel.innerHTML = "";
+    var pick = 0;
+    items.forEach(function (it, i) {
+      var o = document.createElement("option"); o.value = i; o.textContent = it.display; distSel.appendChild(o);
+      if (preferLayer ? it.layer === preferLayer : (st.code === "KL" && it.display === "Thiruvananthapuram")) pick = i;
+    });
+    if (!preferLayer && st.districts.length && pick === 0) pick = st.state_layers.length;
+    distSel.value = pick;
+    setLayer(items[pick], true);
+  }
+
+  stateSel.onchange = function () { fillItems(null); };
+  distSel.onchange = function () { setLayer(items[distSel.value], true); };
+  $("opacity").oninput = function (e) { if (layer) layer.setOpacity(parseFloat(e.target.value)); writeHash(); };
+
+  map.on("singleclick", function (evt) {
+    if (!source) return;
+    var view = map.getView();
+    var url = source.getFeatureInfoUrl(evt.coordinate, view.getResolution(), view.getProjection(), { INFO_FORMAT: "text/plain", FEATURE_COUNT: 3 });
+    if (!url) return;
+    infoEl.className = "muted";
+    if (PROXY.indexOf("YOUR-PROJECT") !== -1) { infoEl.textContent = "Click info needs the Supabase proxy. Set PROXY in index.html (see docs/HANDOFF.md)."; return; }
+    infoEl.textContent = "Asking Bhuvan…";
+    fetch(PROXY + "?u=" + encodeURIComponent(url)).then(function (r) { return r.text().then(function (t) { return { ok: r.ok, t: t }; }); })
+      .then(function (res) {
+        var t = res.t.trim();
+        infoEl.className = res.ok ? "" : "bad";
+        infoEl.textContent = !res.ok ? "Error: " + t : (/no features|^$/i.test(t) ? "No land-cover data at this point." : t);
+      }).catch(function (e) { infoEl.className = "bad"; infoEl.textContent = "Could not reach the proxy: " + e; });
+  });
+
+  fetch("data/catalog.json").then(function (r) { return r.json(); }).then(function (c) {
+    catalog = c; $("vintage").textContent = c.vintage_note + " Data: " + c.attribution + ".";
+    var h = readHash(), wanted = h.get("layer"), startState = 0, kl = 0;
+    if (h.get("o")) $("opacity").value = h.get("o");
+    c.states.forEach(function (s, i) {
+      var o = document.createElement("option"); o.value = i; o.textContent = s.name + (s.districts.length ? "" : " (state-level only)"); stateSel.appendChild(o);
+      if (s.code === "KL") kl = i;
+      if (wanted && (s.districts.concat(s.state_layers)).some(function (d) { return d.layer === wanted; })) startState = i;
+    });
+    stateSel.value = wanted ? startState : kl;
+    fillItems(wanted);
+  }).catch(function (e) { infoEl.className = "bad"; infoEl.textContent = "Could not load data/catalog.json: " + e + " (open via a web server, not file://)"; });
+})();
+</script>
+</body>
+</html>

@@ -1,24 +1,17 @@
 # HANDOFF: read this first
 
-_Last updated: 2026-11-06_
+_Last updated: 2026-11-06 (session 3)_
 
 ## What this project is
 A visualiser for ISRO/Bhuvan data, built as separate modules added one by one. It reuses the OpenLayers map + layer switcher + control patterns from `upstream/lookaround-map` but has **no Python backend**. Target: static hosting (GitHub Pages).
 
 ## Current state
-- [x] Upstream project reviewed (`docs/UPSTREAM_NOTES.md`)
-- [x] Bhuvan WMS GetCapabilities analysed (`docs/DATA_SOURCES.md`)
-- [x] **Phase 1 DONE:** `data/catalog.json` schema v2: 36 states/UTs, 637 district layers, 40 state-level layers (`state_layers[]`), 40+ spelling fixes, validated (`data/catalog_report.txt`)
-- [x] Phase 0 test page written: `isro.html` (plain HTML + OpenLayers 9.2.4 from jsDelivr, reads `data/catalog.json`). Not yet run on a live site; sandbox has no network.
-- [ ] **Phase 0 RESULT NEEDED (NEXT)**: owner deploys to GitHub Pages, opens `isro.html`, clicks 'Run CORS checks' and clicks the map, then pastes the log ('Copy report') into the chat.
-- [ ] Standalone page + Rollup entry
-- [ ] LULC layer, pickers, legend, inspector, polish
-
-## Immediate next step (superseded detail: page is built; see Phase 0 RESULT above)
-Build a tiny `isro.html` test page (no build step) that:
-1. Shows an OpenLayers map with one WMS layer, `sisdpv2:KL_Thiruvananthapuram_lulc_v2`, from `https://bhuvan-vec1.nrsc.gov.in/bhuvan/wms`.
-2. On click, calls GetFeatureInfo (`text/plain` and `application/json` if supported) and prints the result or the error.
-Owner deploys it to GitHub Pages and reports back. If GetFeatureInfo is blocked by CORS, the fallback is a small Supabase edge function proxy.
+- [x] Upstream reviewed; WMS capabilities analysed; Phase 1 catalogue done (`data/catalog.json` v2)
+- [x] Phase 0 DONE (live on https://pievenus.github.io/isro-visualiser/isro.html): tiles display OK, legend via <img> OK, **fetch()/GetFeatureInfo blocked (CORS)** -> Supabase proxy needed (D6)
+- [x] `index.html` written (Phase 2+3): pickers, opacity, legend, click inspector via proxy, URL hash. **Not yet tested live.**
+- [x] `supabase/functions/bhuvan-info/index.ts` written (GetFeatureInfo-only proxy, CORS locked to pievenus.github.io). **Not deployed.**
+- [ ] **NEXT (owner):** create Supabase edge function `bhuvan-info` (dashboard > Edge Functions > paste the file; turn OFF "Verify JWT"), then put its URL in `PROXY` at the top of the script in `index.html`, push, test click info at /index.html.
+- [ ] Phase 4 polish; next modules (slope, urban, groundwater, NDVI)
 
 ## Key decisions (short)
 - NDVI was the original goal, but the WMS has **no NDVI layers**. First module is **Land Use / Land Cover** instead. NDVI stays on the roadmap via another source. See DECISIONS.
@@ -30,6 +23,7 @@ Owner deploys it to GitHub Pages and reports back. If GetFeatureInfo is blocked 
 - Owner's other projects are static sites on GitHub Pages; Supabase is acceptable for small backend needs.
 - Owner switches between accounts/agents, so keep this folder up to date: **update HANDOFF.md and append to SESSION_LOG.md at the end of every session.**
 - Owner lives in Thiruvananthapuram, Kerala; Kerala is a good default test region.
+- **Deliver the whole repo as a zip every time anything changes** (owner request), then they copy it over and push.
 
 ## Gotchas
 - Layer names are inconsistent (e.g. `KL_Alapurza`, `KL_Errnakulam`). Never construct names from patterns; use `catalog.json`. Display names are repaired only in `DISPLAY_FIXES` in `tools/build_catalog.py`.
