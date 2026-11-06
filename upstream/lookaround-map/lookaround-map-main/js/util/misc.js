@@ -1,0 +1,123 @@
+import { CameraType } from "../enums";
+
+export function getUserLocale() {
+  return navigator.languages[0] ?? "en-GB";
+}
+
+export function getDevicePixelRatioAsInt() {
+  if (window.devicePixelRatio) {
+    return Math.ceil(window.devicePixelRatio);
+  }
+  return 1;
+}
+
+export function showNotificationTooltip(text, xPos, yPos, duration) {
+  const notification = document.createElement("div");
+  notification.className = "notification-tooltip";
+  notification.innerText = text;
+  notification.style.left = `${xPos}px`;
+  notification.style.top = `${yPos}px`;
+  document.body.appendChild(notification);
+  window.setTimeout(() => {
+    document.body.removeChild(notification);
+  }, duration);
+}
+
+export function isAppleDevice() {
+  const ua = navigator.userAgent.toLowerCase();
+  const appleIndicators = ["mac os", "macintosh", "iphone", "ipad", "darwin"];
+  for (const indicator of appleIndicators) {
+    if (ua.indexOf(indicator) > -1) {
+      return true;
+    }
+  }
+  return false;
+}
+
+export function approxEqual(a, b, epsilon=1e-6) {
+  return Math.abs(a - b) < epsilon;
+}
+
+export function ceilFirstOfMonth(date) {
+  let year = date.getFullYear();
+  let month = date.getMonth();
+  let day = date.getDate();
+  if (day === 1) {
+    return date;
+  }
+  if (month === 11) {
+    year++;
+    month = 0;
+  } else {
+    month++;
+  }
+  return new Date(year, month, 1);
+}
+
+export function floorFirstOfMonth(date) {
+  let year = date.getFullYear();
+  let month = date.getMonth();
+  let day = date.getDate();
+  if (day === 1) {
+    return date;
+  }
+  return new Date(year, month, 1);
+}
+
+/**
+ * Adds an offset of n days to the current date.
+ * @param {number} n The offset in days. This number can be positive or negative.
+ * @returns {Date} The date in n days.
+ */
+export function getDateInNDays(n) {
+  const date = new Date();
+  date.setUTCHours(0, 0, 0, 0);
+  date.setDate(date.getDate() + n);
+  return date;
+}
+
+/**
+ * Infers the kind of camera the given panorama was taken with from the projection parameters.
+ * @param {object} pano The panorama object.
+ * @returns {number} The camera type.
+ */
+export function inferCameraType(pano) {
+  // Backpack cam
+  if (pano.coverageType == 3) {
+    return CameraType.Backpack;
+  }
+
+  // Big cam (2018-)
+  if (approxEqual(pano.cameraMetadata[0].cy, 0.27488935)) {
+    return CameraType.BigCam;
+  }
+  else if (approxEqual(pano.cameraMetadata[0].cy, 0.30543262)) {
+    // Small cam (2024-)
+    if (pano.timestamp > 1704067200000) {
+      return CameraType.SmallCam;
+    }
+    // Switzerland low cam (2022) published 2026-04-09 
+    else if (pano.timezone === "Europe/Zurich") {
+      return CameraType.LowCam;
+    }
+    // Büsingen enclave, also low cam
+    else if (pano.timezone === "Europe/Busingen") {
+      return CameraType.LowCam;
+    }
+    // Campione enclave, also low cam
+    else if (pano.timezone === "Europe/Rome") {
+      return CameraType.LowCam;
+    }
+    // Unknown type; fall back to small cam
+    else {
+      return CameraType.SmallCam;
+    }
+  }
+  // Switzerland low cam (2021-2022)
+  else if (approxEqual(pano.cameraMetadata[0].cy, 0.36215582)) {
+    return CameraType.LowCam;
+  }
+
+  // Unknown type; fall back to big cam
+  return CameraType.BigCam;
+}

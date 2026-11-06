@@ -1,0 +1,7784 @@
+{
+ "schema_version": 2,
+ "generated_from": "bhuvan_getcapabilities_1_1_1.xml",
+ "wms_url": "https://bhuvan-vec1.nrsc.gov.in/bhuvan/wms",
+ "wms_version": "1.1.1",
+ "district_style": "sisdpv2:sisdp_lulc_v2",
+ "legend_url_template": "https://bhuvan-vec1.nrsc.gov.in/bhuvan/wms?request=GetLegendGraphic&version=1.1.1&format=image%2Fpng&width=20&height=20&layer={layer}",
+ "attribution": "Bhuvan, National Remote Sensing Centre, ISRO, Government of India",
+ "vintage_note": "The WMS publishes no time dimension; capture year is unknown. District names suggest older boundaries (e.g. Telangana shows 10 districts).",
+ "states": [
+  {
+   "code": "AN",
+   "name": "Andaman & Nicobar Islands",
+   "state_layers": [
+    {
+     "layer": "basemap:AN_LULC",
+     "label": null,
+     "bbox": [
+      92.22039,
+      6.75779,
+      93.9478,
+      13.66956
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": []
+  },
+  {
+   "code": "AP",
+   "name": "Andhra Pradesh",
+   "state_layers": [
+    {
+     "layer": "basemap:AP_LULC",
+     "label": null,
+     "bbox": [
+      76.76149,
+      12.62467,
+      84.74713,
+      19.91698
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:AP_Anantapur_lulc_v2",
+     "display": "Anantapur",
+     "bbox": [
+      76.7606,
+      13.6824,
+      78.47007,
+      15.2353
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AP_Chittoor_lulc_v2",
+     "display": "Chittoor",
+     "bbox": [
+      78.06645,
+      12.62373,
+      80.05106,
+      13.99486
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AP_Cuddapah_lulc_v2",
+     "display": "Cuddapah",
+     "bbox": [
+      77.94408,
+      13.72296,
+      79.47099,
+      15.22954
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AP_East_Godavari_lulc_v2",
+     "display": "East Godavari",
+     "bbox": [
+      80.87581,
+      16.30128,
+      82.60477,
+      18.0137
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AP_Guntur_lulc_v2",
+     "display": "Guntur",
+     "bbox": [
+      79.21515,
+      15.74265,
+      80.90624,
+      16.83397
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AP_Krishna_lulc_v2",
+     "display": "Krishna",
+     "bbox": [
+      80.00223,
+      15.70973,
+      81.56059,
+      17.15324
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AP_Kurnool_lulc_v2",
+     "display": "Kurnool",
+     "bbox": [
+      76.98828,
+      14.90032,
+      78.93327,
+      16.14922
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AP_Nellore_lulc_v2",
+     "display": "Nellore",
+     "bbox": [
+      79.08099,
+      13.47091,
+      80.26733,
+      15.11787
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AP_Prakasam_lulc_v2",
+     "display": "Prakasam",
+     "bbox": [
+      78.74299,
+      14.95387,
+      80.48156,
+      16.3181
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AP_Srikakulam_lulc_v2",
+     "display": "Srikakulam",
+     "bbox": [
+      83.52593,
+      18.07861,
+      84.76465,
+      19.16566
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AP_Visakhapatnam_lulc_v2",
+     "display": "Visakhapatnam",
+     "bbox": [
+      81.86686,
+      17.25295,
+      83.48827,
+      18.5462
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AP_Vizianagaram_lulc_v2",
+     "display": "Vizianagaram",
+     "bbox": [
+      82.99892,
+      17.83848,
+      83.81486,
+      19.16189
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AP_West_Godavari_lulc_v2",
+     "display": "West Godavari",
+     "bbox": [
+      80.86753,
+      16.31498,
+      81.8588,
+      17.65271
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "AR",
+   "name": "Arunachal Pradesh",
+   "state_layers": [
+    {
+     "layer": "basemap:AR_LULC",
+     "label": null,
+     "bbox": [
+      91.60555,
+      26.65602,
+      97.30347,
+      29.338
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:AR_Anjaw_lulc_v2",
+     "display": "Anjaw",
+     "bbox": [
+      96.27473,
+      27.61559,
+      97.40288,
+      28.46078
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AR_Changlang_lulc_v2",
+     "display": "Changlang",
+     "bbox": [
+      95.606,
+      26.87676,
+      97.16703,
+      27.66006
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AR_East_Kameng_lulc_v2",
+     "display": "East Kameng",
+     "bbox": [
+      92.46032,
+      26.91363,
+      93.39254,
+      27.98878
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AR_East_Siang_lulc_v2",
+     "display": "East Siang",
+     "bbox": [
+      94.74276,
+      27.73588,
+      95.56888,
+      28.58194
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AR_Kurung_Kumey_lulc_v2",
+     "display": "Kurung Kumey",
+     "bbox": [
+      92.66316,
+      27.59394,
+      93.97684,
+      28.36863
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AR_Lohit_lulc_v2",
+     "display": "Lohit",
+     "bbox": [
+      95.75587,
+      27.54513,
+      96.72012,
+      28.38916
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AR_Longding_lulc_v2",
+     "display": "Longding",
+     "bbox": [
+      95.18114,
+      26.64981,
+      95.51081,
+      27.10721
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AR_Lower_Dibang_Valley_lulc_v2",
+     "display": "Lower Dibang Valley",
+     "bbox": [
+      95.31937,
+      27.88423,
+      96.35074,
+      28.55521
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AR_Lower_Subansiri_lulc_v2",
+     "display": "Lower Subansiri",
+     "bbox": [
+      93.53002,
+      27.29085,
+      94.35583,
+      27.9774
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AR_Papum_Pare_lulc_v2",
+     "display": "Papum Pare",
+     "bbox": [
+      93.21057,
+      26.93611,
+      94.20181,
+      27.63301
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AR_Tawang_lulc_v2",
+     "display": "Tawang",
+     "bbox": [
+      91.54651,
+      27.46017,
+      92.46857,
+      27.86313
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AR_Tirap_lulc_v2",
+     "display": "Tirap",
+     "bbox": [
+      95.36136,
+      26.80558,
+      95.69511,
+      27.26486
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AR_Upper_Dibang_Valley_lulc_v2",
+     "display": "Upper Dibang Valley",
+     "bbox": [
+      95.24529,
+      28.2828,
+      96.61513,
+      29.46163
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AR_Upper_Siang_lulc_v2",
+     "display": "Upper Siang",
+     "bbox": [
+      94.22457,
+      28.16145,
+      95.4112,
+      29.34838
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AR_Upper_Subansiri_lulc_v2",
+     "display": "Upper Subansiri",
+     "bbox": [
+      93.18308,
+      27.76089,
+      94.59864,
+      28.70673
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AR_West_Kameng_lulc_v2",
+     "display": "West Kameng",
+     "bbox": [
+      92.01796,
+      26.88889,
+      92.84435,
+      27.75709
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AR_West_Siang_lulc_v2",
+     "display": "West Siang",
+     "bbox": [
+      93.93633,
+      27.55451,
+      94.94343,
+      29.08813
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "AS",
+   "name": "Assam",
+   "state_layers": [
+    {
+     "layer": "basemap:AS_LULC",
+     "label": null,
+     "bbox": [
+      89.70113,
+      24.13475,
+      96.02091,
+      27.97656
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:AS_Baska_lulc_v2",
+     "display": "Baksa",
+     "bbox": [
+      90.87136,
+      26.41471,
+      91.78864,
+      26.87989
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Barpeta_lulc_v2",
+     "display": "Barpeta",
+     "bbox": [
+      90.65288,
+      26.09004,
+      91.29349,
+      26.66555
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Bongaigaon_lulc_v2",
+     "display": "Bongaigaon",
+     "bbox": [
+      90.37686,
+      26.17387,
+      90.86231,
+      26.53549
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Cachar_lulc_v2",
+     "display": "Cachar",
+     "bbox": [
+      92.41756,
+      24.37313,
+      93.26195,
+      25.14158
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Chirang_lulc_v2",
+     "display": "Chirang",
+     "bbox": [
+      90.33975,
+      26.38339,
+      90.95473,
+      26.90675
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Darrang_lulc_v2",
+     "display": "Darrang",
+     "bbox": [
+      91.74448,
+      26.19862,
+      92.38089,
+      26.66989
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Dhemaji_lulc_v2",
+     "display": "Dhemaji",
+     "bbox": [
+      94.21069,
+      27.26896,
+      95.51164,
+      27.879
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Dhubri_lulc_v2",
+     "display": "Dhubri",
+     "bbox": [
+      89.69782,
+      25.47526,
+      90.48035,
+      26.36226
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Dibrugarh_lulc_v2",
+     "display": "Dibrugarh",
+     "bbox": [
+      94.56836,
+      27.09148,
+      95.48569,
+      27.70398
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Goalpara_lulc_v2",
+     "display": "Goalpara",
+     "bbox": [
+      90.11535,
+      25.88386,
+      91.09901,
+      26.22595
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Golaghat_lulc_v2",
+     "display": "Golaghat",
+     "bbox": [
+      93.28702,
+      25.80711,
+      94.1783,
+      26.82552
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Hailakandi_lulc_v2",
+     "display": "Hailakandi",
+     "bbox": [
+      92.42014,
+      24.13647,
+      92.78058,
+      24.8794
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Jorhat_lulc_v2",
+     "display": "Jorhat",
+     "bbox": [
+      93.73719,
+      26.34782,
+      94.60393,
+      27.18289
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Kamrup_Metro_lulc_v2",
+     "display": "Kamrup Metro",
+     "bbox": [
+      91.5504,
+      25.99636,
+      92.17674,
+      26.27411
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Kamrup_Rural_lulc_v2",
+     "display": "Kamrup Rural",
+     "bbox": [
+      90.9354,
+      25.72179,
+      91.82469,
+      26.53076
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Karbi_anglong_lulc_v2",
+     "display": "Karbi Anglong",
+     "bbox": [
+      92.14432,
+      25.53094,
+      93.89501,
+      26.61279
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Karimganj_lulc_v2",
+     "display": "Karimganj",
+     "bbox": [
+      92.21278,
+      24.24923,
+      92.58984,
+      24.9168
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Kokrajhar_lulc_v2",
+     "display": "Kokrajhar",
+     "bbox": [
+      89.76387,
+      26.11433,
+      90.43005,
+      26.87024
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Lakhimpur_lulc_v2",
+     "display": "Lakhimpur",
+     "bbox": [
+      93.69796,
+      26.82266,
+      94.58846,
+      27.52149
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Morigaon_lulc_v2",
+     "display": "Morigaon",
+     "bbox": [
+      91.97185,
+      26.06313,
+      92.56781,
+      26.51943
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Nagaon_lulc_v2",
+     "display": "Nagaon",
+     "bbox": [
+      92.39899,
+      25.71774,
+      93.31763,
+      26.70138
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Nalbari_lulc_v2",
+     "display": "Nalbari",
+     "bbox": [
+      91.21499,
+      26.13584,
+      91.58537,
+      26.57378
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_North_Cachar_Hills_lulc_v2",
+     "display": "North Cachar Hills",
+     "bbox": [
+      92.52391,
+      24.97001,
+      93.46618,
+      25.82638
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Sibsagar_lulc_v2",
+     "display": "Sibsagar",
+     "bbox": [
+      94.39641,
+      26.71378,
+      95.37232,
+      27.27637
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Sonitpur_lulc_v2",
+     "display": "Sonitpur",
+     "bbox": [
+      92.32485,
+      26.49478,
+      93.78986,
+      27.03913
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Tinsukia_lulc_v2",
+     "display": "Tinsukia",
+     "bbox": [
+      95.2185,
+      27.22258,
+      96.01012,
+      27.97329
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:AS_Udalguri_lulc_v2",
+     "display": "Udalguri",
+     "bbox": [
+      91.71864,
+      26.47473,
+      92.40993,
+      26.9359
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "BR",
+   "name": "Bihar",
+   "state_layers": [
+    {
+     "layer": "basemap:BR_LULC",
+     "label": null,
+     "bbox": [
+      83.32336,
+      24.28596,
+      88.28631,
+      27.52132
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:BR_Araria_lulc_v2",
+     "display": "Araria",
+     "bbox": [
+      87.03742,
+      25.9434,
+      87.70631,
+      26.58647
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Arwal_lulc_v2",
+     "display": "Arwal",
+     "bbox": [
+      84.44352,
+      25.04726,
+      84.87043,
+      25.32241
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Aurangabad_lulc_v2",
+     "display": "Aurangabad",
+     "bbox": [
+      84.00694,
+      24.47682,
+      84.74968,
+      25.12845
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Banka_lulc_v2",
+     "display": "Banka",
+     "bbox": [
+      86.48949,
+      24.5421,
+      87.17485,
+      25.12131
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Begusarai_lulc_v2",
+     "display": "Begusarai",
+     "bbox": [
+      85.73202,
+      25.24955,
+      86.51417,
+      25.77613
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Bhagalpur_lulc_v2",
+     "display": "Bhagalpur",
+     "bbox": [
+      86.63795,
+      25.05809,
+      87.55116,
+      25.5163
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Bhojpur_lulc_v2",
+     "display": "Bhojpur",
+     "bbox": [
+      84.27128,
+      25.16099,
+      84.8533,
+      25.73823
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Buxar_lulc_v2",
+     "display": "Buxar",
+     "bbox": [
+      83.77288,
+      25.26447,
+      84.39567,
+      25.74711
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Darbhanga_lulc_v2",
+     "display": "Darbhanga",
+     "bbox": [
+      85.68608,
+      25.7197,
+      86.4155,
+      26.44573
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Gaya_lulc_v2",
+     "display": "Gaya",
+     "bbox": [
+      84.29561,
+      24.28656,
+      85.39871,
+      25.07359
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Gopalganj_lulc_v2",
+     "display": "Gopalganj",
+     "bbox": [
+      83.90671,
+      26.20287,
+      84.90638,
+      26.63941
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Jamui_lulc_v2",
+     "display": "Jamui",
+     "bbox": [
+      85.82161,
+      24.36804,
+      86.6208,
+      25.14488
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Jehanabad_lulc_v2",
+     "display": "Jehanabad",
+     "bbox": [
+      84.83079,
+      24.98688,
+      85.21264,
+      25.31791
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Kaimur_Bhabua_lulc_v2",
+     "display": "Kaimur Bhabua",
+     "bbox": [
+      83.32334,
+      24.53907,
+      83.8978,
+      25.41082
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Katihar_lulc_v2",
+     "display": "Katihar",
+     "bbox": [
+      87.19991,
+      25.23501,
+      88.07513,
+      25.88204
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Khagaria_lulc_v2",
+     "display": "Khagaria",
+     "bbox": [
+      86.27866,
+      25.25481,
+      86.85618,
+      25.73221
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Kishanganj_lulc_v2",
+     "display": "Kishanganj",
+     "bbox": [
+      87.61181,
+      26.03751,
+      88.29458,
+      26.55548
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Lakhisarai_lulc_v2",
+     "display": "Lakhisarai",
+     "bbox": [
+      85.88593,
+      24.96896,
+      86.39466,
+      25.33948
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Madhepura_lulc_v2",
+     "display": "Madhepura",
+     "bbox": [
+      86.61517,
+      25.44394,
+      87.12666,
+      26.11879
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Madhubani_lulc_v2",
+     "display": "Madhubani",
+     "bbox": [
+      85.75044,
+      26.0316,
+      86.72552,
+      26.66646
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Munger_lulc_v2",
+     "display": "Munger",
+     "bbox": [
+      86.25966,
+      24.94141,
+      86.73712,
+      25.49826
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Muzaffarpur_lulc_v2",
+     "display": "Muzaffarpur",
+     "bbox": [
+      84.8724,
+      25.90447,
+      85.74902,
+      26.393
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Nalanda_lulc_v2",
+     "display": "Nalanda",
+     "bbox": [
+      85.15532,
+      24.96039,
+      85.92986,
+      25.46244
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Nawada_lulc_v2",
+     "display": "Nawada",
+     "bbox": [
+      85.26664,
+      24.52015,
+      86.05455,
+      25.11425
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Pashchim_Champaran_lulc_v2",
+     "display": "Pashchim Champaran",
+     "bbox": [
+      83.83454,
+      26.58154,
+      84.76284,
+      27.52149
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Patna_lulc_v2",
+     "display": "Patna",
+     "bbox": [
+      84.68905,
+      25.20331,
+      86.06813,
+      25.73291
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Purba_Champaran_lulc_v2",
+     "display": "Purba Champaran",
+     "bbox": [
+      84.48489,
+      26.25389,
+      85.29648,
+      27.02233
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Purnea_lulc_v2",
+     "display": "Purnea",
+     "bbox": [
+      86.9898,
+      25.43435,
+      87.87397,
+      26.11922
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Rohtas_lulc_v2",
+     "display": "Rohtas",
+     "bbox": [
+      83.50006,
+      24.50308,
+      84.46391,
+      25.37774
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Saharsa_lulc_v2",
+     "display": "Saharsa",
+     "bbox": [
+      86.31304,
+      25.5967,
+      86.87349,
+      26.0721
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Samastipur_lulc_v2",
+     "display": "Samastipur",
+     "bbox": [
+      85.52703,
+      25.46048,
+      86.39209,
+      26.08934
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Saran_lulc_v2",
+     "display": "Saran",
+     "bbox": [
+      84.40542,
+      25.62326,
+      85.19721,
+      26.22021
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Sheikhpura_lulc_v2",
+     "display": "Sheikhpura",
+     "bbox": [
+      85.60256,
+      24.97699,
+      85.99417,
+      25.27527
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Sheohar_lulc_v2",
+     "display": "Sheohar",
+     "bbox": [
+      85.17852,
+      26.32696,
+      85.40498,
+      26.66285
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Sitamarhi_lulc_v2",
+     "display": "Sitamarhi",
+     "bbox": [
+      85.2361,
+      26.27188,
+      85.82413,
+      26.87397
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Siwan_lulc_v2",
+     "display": "Siwan",
+     "bbox": [
+      84.00838,
+      25.88764,
+      84.77869,
+      26.37409
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Supaul_lulc_v2",
+     "display": "Supaul",
+     "bbox": [
+      86.40459,
+      25.99288,
+      87.11998,
+      26.56234
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:BR_Vaishali_lulc_v2",
+     "display": "Vaishali",
+     "bbox": [
+      85.06543,
+      25.48399,
+      85.64482,
+      26.01571
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "CH",
+   "name": "Chandigarh",
+   "state_layers": [
+    {
+     "layer": "basemap:CH_LULC",
+     "label": null,
+     "bbox": [
+      76.70438,
+      30.66546,
+      76.84952,
+      30.78272
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": []
+  },
+  {
+   "code": "CG",
+   "name": "Chhattisgarh",
+   "state_layers": [
+    {
+     "layer": "basemap:CG1_LULC",
+     "label": null,
+     "bbox": [
+      80.24605,
+      17.78177,
+      84.39594,
+      24.10307
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:CH_Balod_lulc_v2",
+     "display": "Balod",
+     "bbox": [
+      80.80249,
+      20.37688,
+      81.51643,
+      21.07823
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Balodbajar_lulc_v2",
+     "display": "Balodabazar",
+     "bbox": [
+      81.65733,
+      21.25855,
+      82.98604,
+      21.8833
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Balrampur_lulc_v2",
+     "display": "Balrampur",
+     "bbox": [
+      82.69291,
+      23.15057,
+      84.07392,
+      24.1068
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Bastar_lulc_v2",
+     "display": "Bastar",
+     "bbox": [
+      81.34412,
+      18.60125,
+      82.24601,
+      19.55901
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Bemetra_lulc_v2",
+     "display": "Bemetara",
+     "bbox": [
+      81.1393,
+      21.33166,
+      81.93681,
+      22.02444
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Bijapur_lulc_v2",
+     "display": "Bijapur",
+     "bbox": [
+      80.25,
+      18.13561,
+      81.50098,
+      19.41154
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Bilaspur_lulc_v2",
+     "display": "Bilaspur",
+     "bbox": [
+      81.72559,
+      21.71164,
+      82.47292,
+      23.1184
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Dantewada_lulc_v2",
+     "display": "Dantewada",
+     "bbox": [
+      81.10466,
+      18.39465,
+      81.77729,
+      19.2157
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Dhamtari_lulc_v2",
+     "display": "Dhamtari",
+     "bbox": [
+      81.40972,
+      20.04385,
+      82.18,
+      21.02723
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Durg_lulc_v2",
+     "display": "Durg",
+     "bbox": [
+      81.14806,
+      20.84868,
+      81.62516,
+      21.5449
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Gariabandh_lulc_v2",
+     "display": "Gariaband",
+     "bbox": [
+      81.87219,
+      19.77522,
+      82.72379,
+      21.0803
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Janjgir-Champa_lulc_v2",
+     "display": "Janjgir-Champa",
+     "bbox": [
+      82.30367,
+      21.68184,
+      83.31728,
+      22.26326
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Jashpur_lulc_v2",
+     "display": "Jashpur",
+     "bbox": [
+      83.37184,
+      22.28885,
+      84.39649,
+      23.24991
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Kanker_lulc_v2",
+     "display": "Kanker",
+     "bbox": [
+      80.40162,
+      19.69874,
+      81.81417,
+      20.55884
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Kawardha_lulc_v2",
+     "display": "Kawardha",
+     "bbox": [
+      80.82556,
+      21.70414,
+      81.55818,
+      22.52645
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Kondagaon_lulc_v2",
+     "display": "Kondagaon",
+     "bbox": [
+      81.29266,
+      19.22305,
+      82.06632,
+      20.19557
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Korba_lulc_v2",
+     "display": "Korba",
+     "bbox": [
+      82.13496,
+      22.0396,
+      83.12363,
+      22.99993
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Koriya_lulc_v2",
+     "display": "Koriya",
+     "bbox": [
+      81.57696,
+      22.93774,
+      82.7727,
+      23.92554
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Mahasamund_lulc_v2",
+     "display": "Mahasamund",
+     "bbox": [
+      81.98503,
+      20.82773,
+      83.27981,
+      21.55421
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Mungeli_lulc_v2",
+     "display": "Mungeli",
+     "bbox": [
+      81.47807,
+      21.81321,
+      82.03667,
+      22.67415
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Narayanpur_lulc_v2",
+     "display": "Narayanpur",
+     "bbox": [
+      80.66253,
+      19.22777,
+      81.51572,
+      19.93655
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Raigarh_lulc_v2",
+     "display": "Raigarh",
+     "bbox": [
+      82.92353,
+      21.34243,
+      83.80444,
+      22.7906
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Raipur_lulc_v2",
+     "display": "Raipur",
+     "bbox": [
+      81.53384,
+      20.94048,
+      82.19145,
+      21.6262
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Rajnandgaon_lulc_v2",
+     "display": "Rajnandgaon",
+     "bbox": [
+      80.38933,
+      20.1174,
+      81.21636,
+      21.83449
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Sukma_lulc_v2",
+     "display": "Sukma",
+     "bbox": [
+      80.94926,
+      17.78206,
+      81.96909,
+      18.77452
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Surajpur_lulc_v2",
+     "display": "Surajpur",
+     "bbox": [
+      82.49811,
+      22.79593,
+      83.36716,
+      23.91761
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:CH_Surguja_lulc_v2",
+     "display": "Surguja",
+     "bbox": [
+      82.75425,
+      22.62318,
+      83.69015,
+      23.27819
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "DN",
+   "name": "Dadra & Nagar Haveli",
+   "state_layers": [
+    {
+     "layer": "basemap:DN_LULC",
+     "label": null,
+     "bbox": [
+      72.91514,
+      20.04743,
+      73.21845,
+      20.36073
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:DN_Dadra_Nagar_Haveli_lulc_v2",
+     "display": "Dadra & Nagar Haveli",
+     "bbox": [
+      72.91056,
+      20.05185,
+      73.24579,
+      20.37238
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "DD",
+   "name": "Daman & Diu",
+   "state_layers": [
+    {
+     "layer": "basemap:DIU_LULC",
+     "label": "Diu",
+     "bbox": [
+      70.86759,
+      20.70436,
+      71.00768,
+      20.74069
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    },
+    {
+     "layer": "basemap:Daman_LULC",
+     "label": "Daman",
+     "bbox": [
+      72.8146,
+      20.366,
+      72.90476,
+      20.4686
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:DD_Daman_lulc_v2",
+     "display": "Daman",
+     "bbox": [
+      72.80199,
+      20.36846,
+      72.90331,
+      20.47456
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:DD_Diu_lulc_v2",
+     "display": "Diu",
+     "bbox": [
+      70.87319,
+      20.69875,
+      70.99764,
+      20.73994
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "DL",
+   "name": "Delhi",
+   "state_layers": [
+    {
+     "layer": "basemap:DL_LULC",
+     "label": null,
+     "bbox": [
+      76.84103,
+      28.40758,
+      77.34489,
+      28.86827
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:DL_Central_lulc_v2",
+     "display": "Central",
+     "bbox": [
+      77.18078,
+      28.62268,
+      77.26042,
+      28.66024
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:DL_East_lulc_v2",
+     "display": "East",
+     "bbox": [
+      77.25057,
+      28.57678,
+      77.34762,
+      28.67386
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:DL_New_Delhi_lulc_v2",
+     "display": "New Delhi",
+     "bbox": [
+      77.17229,
+      28.57689,
+      77.26455,
+      28.64111
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:DL_North_lulc_v2",
+     "display": "North",
+     "bbox": [
+      77.16594,
+      28.64777,
+      77.25299,
+      28.78652
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:DL_North_East_lulc_v2",
+     "display": "North East",
+     "bbox": [
+      77.21329,
+      28.66244,
+      77.33775,
+      28.78352
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:DL_North_West_lulc_v2",
+     "display": "North West",
+     "bbox": [
+      76.9474,
+      28.66833,
+      77.22764,
+      28.87932
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:DL_South_lulc_v2",
+     "display": "South",
+     "bbox": [
+      77.1112,
+      28.40305,
+      77.34765,
+      28.60792
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:DL_South_West_lulc_v2",
+     "display": "South West",
+     "bbox": [
+      76.84251,
+      28.48279,
+      77.21397,
+      28.66994
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:DL_West_lulc_v2",
+     "display": "West",
+     "bbox": [
+      76.95208,
+      28.61231,
+      77.18825,
+      28.69553
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "GA",
+   "name": "Goa",
+   "state_layers": [
+    {
+     "layer": "basemap:GA_LULC",
+     "label": null,
+     "bbox": [
+      73.68527,
+      14.89971,
+      74.33638,
+      15.80055
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:GA_North_Goa_lulc_v2",
+     "display": "North Goa",
+     "bbox": [
+      73.67429,
+      14.75342,
+      74.28079,
+      15.80852
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GA_South_Goa_lulc_v2",
+     "display": "South Goa",
+     "bbox": [
+      73.78356,
+      14.89799,
+      74.3356,
+      15.49183
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "GJ",
+   "name": "Gujarat",
+   "state_layers": [
+    {
+     "layer": "basemap:GJ_LULC",
+     "label": null,
+     "bbox": [
+      68.49948,
+      20.12117,
+      74.47672,
+      24.70244
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:GJ_Ahmadabad_lulc_v2",
+     "display": "Ahmedabad",
+     "bbox": [
+      71.61476,
+      21.98605,
+      72.84404,
+      23.50863
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Amreli_lulc_v2",
+     "display": "Amreli",
+     "bbox": [
+      70.73625,
+      20.80311,
+      71.67817,
+      22.04062
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Anand_lulc_v2",
+     "display": "Anand",
+     "bbox": [
+      72.35604,
+      22.19955,
+      73.22438,
+      22.73584
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Banas_Kantha_lulc_v2",
+     "display": "Banas Kantha",
+     "bbox": [
+      71.12997,
+      23.82619,
+      73.02576,
+      24.72266
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Bharuch_lulc_v2",
+     "display": "Bharuch",
+     "bbox": [
+      72.50777,
+      21.41821,
+      73.50039,
+      22.25804
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Bhavnagar_lulc_v2",
+     "display": "Bhavnagar",
+     "bbox": [
+      71.39163,
+      20.99774,
+      72.30638,
+      22.35479
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Dohad_lulc_v2",
+     "display": "Dohad",
+     "bbox": [
+      73.77468,
+      22.50219,
+      74.47891,
+      23.3338
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Gandhinagar_lulc_v2",
+     "display": "Gandhinagar",
+     "bbox": [
+      72.33714,
+      22.99728,
+      73.03052,
+      23.56725
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Jamnagar_lulc_v2",
+     "display": "Jamnagar",
+     "bbox": [
+      68.93642,
+      21.69747,
+      70.66352,
+      22.9296
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Junagadh_lulc_v2",
+     "display": "Junagadh",
+     "bbox": [
+      69.94242,
+      20.69004,
+      71.22389,
+      21.68017
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Kachchh_lulc_v2",
+     "display": "Kachchh",
+     "bbox": [
+      68.13828,
+      22.77571,
+      71.5,
+      24.68343
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Kheda_lulc_v2",
+     "display": "Kheda",
+     "bbox": [
+      72.50593,
+      22.49959,
+      73.57601,
+      23.28893
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Mahesana_lulc_v2",
+     "display": "Mahesana",
+     "bbox": [
+      71.94091,
+      23.03889,
+      72.86598,
+      24.10404
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Narmada_lulc_v2",
+     "display": "Narmada",
+     "bbox": [
+      73.29702,
+      21.39353,
+      73.98933,
+      22.07855
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Navsari_lulc_v2",
+     "display": "Navsari",
+     "bbox": [
+      72.72212,
+      20.57832,
+      73.49637,
+      21.07877
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Panch_Mahals_lulc_v2",
+     "display": "Panch Mahals",
+     "bbox": [
+      73.35032,
+      22.28492,
+      74.02051,
+      23.45823
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Patan_lulc_v2",
+     "display": "Patan",
+     "bbox": [
+      71.03429,
+      23.39319,
+      72.48249,
+      24.15426
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Porbandar_lulc_v2",
+     "display": "Porbandar",
+     "bbox": [
+      69.37938,
+      21.22872,
+      70.14908,
+      21.97854
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Rajkot_lulc_v2",
+     "display": "Rajkot",
+     "bbox": [
+      70.02998,
+      21.52597,
+      71.5133,
+      23.17676
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Sabar_Kantha_lulc_v2",
+     "display": "Sabar Kantha",
+     "bbox": [
+      72.72399,
+      23.0593,
+      73.65548,
+      24.49378
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Surat_lulc_v2",
+     "display": "Surat",
+     "bbox": [
+      72.56716,
+      20.81437,
+      73.70784,
+      21.56837
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Surendranagar_lulc_v2",
+     "display": "Surendranagar",
+     "bbox": [
+      70.94714,
+      22.12242,
+      72.18997,
+      23.52598
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Tapi_lulc_v2",
+     "display": "Tapi",
+     "bbox": [
+      73.18928,
+      20.79905,
+      74.34164,
+      21.57748
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_The_Dangs_lulc_v2",
+     "display": "The Dangs",
+     "bbox": [
+      73.46728,
+      20.56109,
+      73.95034,
+      21.08281
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Vadodara_lulc_v2",
+     "display": "Vadodara",
+     "bbox": [
+      72.83805,
+      21.82078,
+      74.29245,
+      22.81244
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:GJ_Valsad_lulc_v2",
+     "display": "Valsad",
+     "bbox": [
+      72.729,
+      20.11073,
+      73.494,
+      20.74299
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "HR",
+   "name": "Haryana",
+   "state_layers": [
+    {
+     "layer": "basemap:HR_LULC",
+     "label": null,
+     "bbox": [
+      74.49236,
+      27.65855,
+      77.59273,
+      30.92653
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:HR_Ambala_lulc_v2",
+     "display": "Ambala",
+     "bbox": [
+      76.54339,
+      30.12363,
+      77.21247,
+      30.56296
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HR_Bhiwani_lulc_v2",
+     "display": "Bhiwani",
+     "bbox": [
+      75.47375,
+      28.38305,
+      76.46572,
+      29.0813
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HR_Faridabad_lulc_v2",
+     "display": "Faridabad",
+     "bbox": [
+      77.14975,
+      28.16209,
+      77.55021,
+      28.51286
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HR_Fatehbad_lulc_v2",
+     "display": "Fatehabad",
+     "bbox": [
+      75.22002,
+      29.24958,
+      75.96349,
+      29.82236
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HR_Gurgaon_lulc_v2",
+     "display": "Gurgaon",
+     "bbox": [
+      76.65029,
+      28.22189,
+      77.2431,
+      28.54141
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HR_Hisar_lulc_v2",
+     "display": "Hisar",
+     "bbox": [
+      75.26852,
+      28.89862,
+      76.3181,
+      29.58018
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HR_Jhajjar_lulc_v2",
+     "display": "Jhajjar",
+     "bbox": [
+      76.28267,
+      28.35593,
+      76.96846,
+      28.86537
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HR_Jind_lulc_v2",
+     "display": "Jind",
+     "bbox": [
+      75.93273,
+      29.05541,
+      76.76246,
+      29.84485
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HR_Kaithal_lulc_v2",
+     "display": "Kaithal",
+     "bbox": [
+      76.16835,
+      29.51468,
+      76.74886,
+      30.19252
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HR_Karnal_lulc_v2",
+     "display": "Karnal",
+     "bbox": [
+      76.49532,
+      29.44038,
+      77.22952,
+      29.99343
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HR_Kurukshetra_lulc_v2",
+     "display": "Kurukshetra",
+     "bbox": [
+      76.42219,
+      29.86683,
+      77.12279,
+      30.25461
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HR_Mahendragarh_lulc_v2",
+     "display": "Mahendragarh",
+     "bbox": [
+      75.8952,
+      27.79717,
+      76.36793,
+      28.46889
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HR_Mewat_lulc_v2",
+     "display": "Mewat",
+     "bbox": [
+      76.85294,
+      27.65255,
+      77.33643,
+      28.34666
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HR_Palwal_lulc_v2",
+     "display": "Palwal",
+     "bbox": [
+      77.11929,
+      27.84742,
+      77.5459,
+      28.27691
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HR_Panchkula_lulc_v2",
+     "display": "Panchkula",
+     "bbox": [
+      76.77609,
+      30.45054,
+      77.177,
+      30.92861
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HR_Panipat_lulc_v2",
+     "display": "Panipat",
+     "bbox": [
+      76.63191,
+      29.16172,
+      77.16119,
+      29.51419
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HR_Rewari_lulc_v2",
+     "display": "Rewari",
+     "bbox": [
+      76.28006,
+      27.96368,
+      76.85878,
+      28.47287
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HR_Rohtak_lulc_v2",
+     "display": "Rohtak",
+     "bbox": [
+      76.21238,
+      28.68257,
+      76.90126,
+      29.09834
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HR_Sirsa_lulc_v2",
+     "display": "Sirsa",
+     "bbox": [
+      74.47362,
+      29.22287,
+      75.30382,
+      29.9924
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HR_Sonipat_lulc_v2",
+     "display": "Sonipat",
+     "bbox": [
+      76.47453,
+      28.81491,
+      77.2341,
+      29.28917
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HR_Yamunanagar_lulc_v2",
+     "display": "Yamunanagar",
+     "bbox": [
+      77.06527,
+      29.93506,
+      77.59273,
+      30.49683
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "HP",
+   "name": "Himachal Pradesh",
+   "state_layers": [
+    {
+     "layer": "basemap:HP_LULC",
+     "label": null,
+     "bbox": [
+      75.59724,
+      30.37712,
+      79.01187,
+      33.19858
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:HP_Hamirpur_lulc_v2",
+     "display": "Hamirpur",
+     "bbox": [
+      76.29798,
+      31.41614,
+      76.72976,
+      31.89301
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HP_Kangra_lulc_v2",
+     "display": "Kangra",
+     "bbox": [
+      75.59419,
+      31.6831,
+      77.07855,
+      32.46761
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HP_Kullu_lulc_v2",
+     "display": "Kullu",
+     "bbox": [
+      76.93505,
+      31.34036,
+      77.86835,
+      32.41541
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HP_Mandi_lulc_v2",
+     "display": "Mandi",
+     "bbox": [
+      76.62036,
+      31.2282,
+      77.38914,
+      32.07291
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HP_Shimla_lulc_v2",
+     "display": "Shimla",
+     "bbox": [
+      76.98751,
+      30.76524,
+      78.31166,
+      31.71506
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HP_Sirmaur_lulc_v2",
+     "display": "Sirmaur",
+     "bbox": [
+      77.01709,
+      30.37735,
+      77.82589,
+      31.02068
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:HP_Solan_lulc_v2",
+     "display": "Solan",
+     "bbox": [
+      76.60198,
+      30.74761,
+      77.25109,
+      31.36567
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "JK",
+   "name": "Jammu & Kashmir",
+   "state_layers": [
+    {
+     "layer": "basemap:JK_LULC",
+     "label": null,
+     "bbox": [
+      73.79947,
+      32.28043,
+      79.52145,
+      35.20755
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:JK_Anantnag_lulc_v2",
+     "display": "Anantnag",
+     "bbox": [
+      75.04472,
+      33.3634,
+      75.59625,
+      34.25472
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JK_Baramulla_lulc_v2",
+     "display": "Baramulla",
+     "bbox": [
+      73.9094,
+      33.90743,
+      74.69774,
+      34.43885
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JK_Budgam_lulc_v2",
+     "display": "Budgam",
+     "bbox": [
+      74.40342,
+      33.6778,
+      74.91655,
+      34.11931
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JK_Doda_lulc_v2",
+     "display": "Doda",
+     "bbox": [
+      75.34605,
+      32.86367,
+      76.1218,
+      33.4077
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JK_Ganderbal_lulc_v2",
+     "display": "Ganderbal",
+     "bbox": [
+      74.64005,
+      34.13522,
+      75.49998,
+      34.46487
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JK_Jammu_lulc_v2",
+     "display": "Jammu",
+     "bbox": [
+      74.40318,
+      32.4799,
+      75.16835,
+      33.06128
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JK_Kargil_lulc_v2",
+     "display": "Kargil",
+     "bbox": [
+      75.23886,
+      32.82605,
+      77.68435,
+      34.83421
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JK_Kulgam_lulc_v2",
+     "display": "Kulgam",
+     "bbox": [
+      74.51547,
+      33.46733,
+      75.16514,
+      33.78583
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JK_Poonch_lulc_v2",
+     "display": "Poonch",
+     "bbox": [
+      73.95164,
+      33.46677,
+      74.57751,
+      33.99611
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JK_Pulwama_lulc_v2",
+     "display": "Pulwama",
+     "bbox": [
+      74.71595,
+      33.76852,
+      75.23573,
+      34.1086
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JK_Rajouri_lulc_v2",
+     "display": "Rajouri",
+     "bbox": [
+      74.00882,
+      32.97074,
+      74.69412,
+      33.58363
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JK_Ramban_lulc_v2",
+     "display": "Ramban",
+     "bbox": [
+      74.95801,
+      33.06739,
+      75.4184,
+      33.52538
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JK_Samba_lulc_v2",
+     "display": "Samba",
+     "bbox": [
+      74.87615,
+      32.39593,
+      75.34728,
+      32.78892
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JK_Shopain_lulc_v2",
+     "display": "Shopian",
+     "bbox": [
+      74.56661,
+      33.63585,
+      75.05742,
+      33.81336
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JK_Srinagar_lulc_v2",
+     "display": "Srinagar",
+     "bbox": [
+      74.67048,
+      34.01203,
+      75.14721,
+      34.22823
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "JH",
+   "name": "Jharkhand",
+   "state_layers": [
+    {
+     "layer": "basemap:JH_LULC",
+     "label": null,
+     "bbox": [
+      83.33001,
+      21.97838,
+      87.96204,
+      25.34891
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:JH_Bokaro_lulc_v2",
+     "display": "Bokaro",
+     "bbox": [
+      85.58275,
+      23.41095,
+      86.47948,
+      23.9868
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JH_Chatra_lulc_v2",
+     "display": "Chatra",
+     "bbox": [
+      84.44725,
+      23.68047,
+      85.35112,
+      24.53046
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JH_Deoghar_lulc_v2",
+     "display": "Deoghar",
+     "bbox": [
+      86.45456,
+      24.04128,
+      87.0682,
+      24.6218
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JH_Dhanbad_lulc_v2",
+     "display": "Dhanbad",
+     "bbox": [
+      86.10995,
+      23.60735,
+      86.86391,
+      24.06123
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JH_Dumka_lulc_v2",
+     "display": "Dumka",
+     "bbox": [
+      86.88752,
+      23.98151,
+      87.69997,
+      24.65029
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JH_Giridih_lulc_v2",
+     "display": "Giridih",
+     "bbox": [
+      85.67432,
+      23.88401,
+      86.57047,
+      24.77954
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JH_Godda_lulc_v2",
+     "display": "Godda",
+     "bbox": [
+      87.0461,
+      24.50042,
+      87.52109,
+      25.22786
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JH_Jamtara_lulc_v2",
+     "display": "Jamtara",
+     "bbox": [
+      86.46625,
+      23.77994,
+      87.29326,
+      24.16587
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JH_Khunti_lulc_v2",
+     "display": "Khunti",
+     "bbox": [
+      84.93946,
+      22.57237,
+      85.65372,
+      23.2843
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JH_Latehar_lulc_v2",
+     "display": "Latehar",
+     "bbox": [
+      83.96717,
+      23.32504,
+      84.96628,
+      24.0493
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JH_Lohardaga_lulc_v2",
+     "display": "Lohardaga",
+     "bbox": [
+      84.38403,
+      23.27886,
+      84.9453,
+      23.67544
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JH_Pakur_lulc_v2",
+     "display": "Pakur",
+     "bbox": [
+      87.38595,
+      24.23623,
+      87.91811,
+      24.82973
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JH_Palamu_lulc_v2",
+     "display": "Palamu",
+     "bbox": [
+      83.81095,
+      23.79576,
+      84.58965,
+      24.64326
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JH_Paschimi_Singhbhum_lulc_v2",
+     "display": "Paschimi Singhbhum",
+     "bbox": [
+      84.98386,
+      21.9702,
+      86.04727,
+      22.88565
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JH_Ranchi_lulc_v2",
+     "display": "Ranchi",
+     "bbox": [
+      84.86794,
+      22.88345,
+      85.90199,
+      23.71745
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JH_Sahibganj_lulc_v2",
+     "display": "Sahibganj",
+     "bbox": [
+      87.4529,
+      24.71521,
+      87.96247,
+      25.34891
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:JH_Saraikela_Kharsawa_lulc_v2",
+     "display": "Saraikela Kharsawa",
+     "bbox": [
+      85.51254,
+      22.48501,
+      86.24735,
+      23.16044
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "KA",
+   "name": "Karnataka",
+   "state_layers": [
+    {
+     "layer": "basemap:KA_LULC",
+     "label": null,
+     "bbox": [
+      74.08541,
+      11.59247,
+      78.58738,
+      18.43695
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:KA_Bagalkot_lulc_v2",
+     "display": "Bagalkot",
+     "bbox": [
+      74.98724,
+      15.81152,
+      76.33356,
+      16.76718
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Belgaum_lulc_v2",
+     "display": "Belgaum",
+     "bbox": [
+      74.08701,
+      15.35784,
+      75.45896,
+      16.95644
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Bellary_lulc_v2",
+     "display": "Bellary",
+     "bbox": [
+      75.66457,
+      14.5593,
+      77.17038,
+      15.83648
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Banglore_Rural_lulc_v2",
+     "display": "Bengaluru Rural",
+     "bbox": [
+      77.18347,
+      12.86461,
+      77.96656,
+      13.49789
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Banglore_lulc_v2",
+     "display": "Bengaluru Urban",
+     "bbox": [
+      77.32328,
+      12.65589,
+      77.83956,
+      13.23191
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Bidar_lulc_v2",
+     "display": "Bidar",
+     "bbox": [
+      76.6918,
+      17.58236,
+      77.6559,
+      18.47674
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Bijapur_lulc_v2",
+     "display": "Bijapur",
+     "bbox": [
+      75.33466,
+      16.15022,
+      76.47209,
+      17.47849
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Chamarajnagar_lulc_v2",
+     "display": "Chamarajnagar",
+     "bbox": [
+      76.40396,
+      11.59344,
+      77.77801,
+      12.31303
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Chikballapur_lulc_v2",
+     "display": "Chikballapur",
+     "bbox": [
+      77.36081,
+      13.21779,
+      78.21044,
+      13.95909
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Chikmagalur_lulc_v2",
+     "display": "Chikmagalur",
+     "bbox": [
+      75.08016,
+      12.91114,
+      76.36494,
+      13.89839
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Chitradurga_lulc_v2",
+     "display": "Chitradurga",
+     "bbox": [
+      76.02589,
+      13.57491,
+      77.02503,
+      15.03507
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Dakshina_Kannada_lulc_v2",
+     "display": "Dakshina Kannada",
+     "bbox": [
+      74.77675,
+      12.45909,
+      75.67144,
+      13.18331
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Davangere_lulc_v2",
+     "display": "Davangere",
+     "bbox": [
+      75.3998,
+      13.80497,
+      76.53484,
+      14.93089
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Dharwad_lulc_v2",
+     "display": "Dharwad",
+     "bbox": [
+      74.72808,
+      15.03765,
+      75.55492,
+      15.70233
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Gadag_lulc_v2",
+     "display": "Gadag",
+     "bbox": [
+      75.27455,
+      14.943,
+      76.04599,
+      15.88615
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Gulberga_lulc_v2",
+     "display": "Gulbarga",
+     "bbox": [
+      76.06609,
+      16.70996,
+      77.69359,
+      17.77016
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Hassan_lulc_v2",
+     "display": "Hassan",
+     "bbox": [
+      75.55527,
+      12.51139,
+      76.63456,
+      13.54687
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Haveri_lulc_v2",
+     "display": "Haveri",
+     "bbox": [
+      75.01598,
+      14.27314,
+      75.82146,
+      15.16096
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Kodagu_lulc_v2",
+     "display": "Kodagu",
+     "bbox": [
+      75.36641,
+      11.92941,
+      76.19017,
+      12.83316
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Kolar_lulc_v2",
+     "display": "Kolar",
+     "bbox": [
+      77.84101,
+      12.75946,
+      78.58896,
+      13.59693
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Koppal_lulc_v2",
+     "display": "Koppal",
+     "bbox": [
+      75.77447,
+      15.13605,
+      76.81368,
+      16.01077
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Mandya_lulc_v2",
+     "display": "Mandya",
+     "bbox": [
+      76.33019,
+      12.21651,
+      77.33493,
+      13.05431
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Mysore_lulc_v2",
+     "display": "Mysore",
+     "bbox": [
+      75.90952,
+      11.73689,
+      77.13526,
+      12.6543
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Raichur_lulc_v2",
+     "display": "Raichur",
+     "bbox": [
+      76.23539,
+      15.54646,
+      77.59921,
+      16.56102
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Ramanagar_lulc_v2",
+     "display": "Ramanagar",
+     "bbox": [
+      77.07077,
+      12.24209,
+      77.63596,
+      13.19576
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Shimoga_lulc_v2",
+     "display": "Shimoga",
+     "bbox": [
+      74.62629,
+      13.45592,
+      75.88007,
+      14.65413
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Tumkur_lulc_v2",
+     "display": "Tumkur",
+     "bbox": [
+      76.34725,
+      12.7442,
+      77.51824,
+      14.34394
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Udupi_lulc_v2",
+     "display": "Udupi",
+     "bbox": [
+      74.58349,
+      13.06937,
+      75.20665,
+      13.9814
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Uttara_Kannada_lulc_v2",
+     "display": "Uttara Kannada",
+     "bbox": [
+      74.08606,
+      13.92442,
+      75.10355,
+      15.52386
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KA_Yadgir_lulc_v2",
+     "display": "Yadgir",
+     "bbox": [
+      76.29264,
+      16.19288,
+      77.47759,
+      16.95308
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "KL",
+   "name": "Kerala",
+   "state_layers": [
+    {
+     "layer": "basemap:KL_LULC",
+     "label": null,
+     "bbox": [
+      74.86371,
+      8.29388,
+      77.4132,
+      12.79504
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:KL_Alapurza_lulc_v2",
+     "display": "Alappuzha",
+     "bbox": [
+      76.2779,
+      9.10893,
+      76.69239,
+      9.8893
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KL_Errnakulam_lulc_v2",
+     "display": "Ernakulam",
+     "bbox": [
+      76.16644,
+      9.78737,
+      77.08965,
+      10.30195
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KL_Idukki_lulc_v2",
+     "display": "Idukki",
+     "bbox": [
+      76.62876,
+      9.27127,
+      77.41312,
+      10.35699
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KL_Kannur_lulc_v2",
+     "display": "Kannur",
+     "bbox": [
+      75.16862,
+      11.6738,
+      75.94005,
+      12.29975
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KL_Kasargod_lulc_v2",
+     "display": "Kasaragod",
+     "bbox": [
+      74.86613,
+      12.04319,
+      75.43317,
+      12.7944
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KL_Kollam_lulc_v2",
+     "display": "Kollam",
+     "bbox": [
+      76.46628,
+      8.76003,
+      77.26349,
+      9.17201
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KL_Kottayam_lulc_v2",
+     "display": "Kottayam",
+     "bbox": [
+      76.36587,
+      9.39926,
+      76.98629,
+      9.85682
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KL_Kozhikkode_lulc_v2",
+     "display": "Kozhikode",
+     "bbox": [
+      75.5372,
+      11.1234,
+      76.14658,
+      11.80461
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KL_Malappuram_lulc_v2",
+     "display": "Malappuram",
+     "bbox": [
+      75.82687,
+      10.68499,
+      76.55,
+      11.52759
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KL_Palakkad_lulc_v2",
+     "display": "Palakkad",
+     "bbox": [
+      76.02677,
+      10.33327,
+      76.90814,
+      11.2381
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KL_Pathanamthitta_lulc_v2",
+     "display": "Pathanamthitta",
+     "bbox": [
+      76.47482,
+      9.07027,
+      77.28425,
+      9.48211
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KL_Thiruvananthapuram_lulc_v2",
+     "display": "Thiruvananthapuram",
+     "bbox": [
+      76.67405,
+      8.29119,
+      77.28475,
+      8.86143
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KL_Thrissur_lulc_v2",
+     "display": "Thrissur",
+     "bbox": [
+      75.95761,
+      10.17274,
+      76.90212,
+      10.78172
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:KL_Wayanad_lulc_v2",
+     "display": "Wayanad",
+     "bbox": [
+      75.77472,
+      11.45069,
+      76.445,
+      11.97768
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "LD",
+   "name": "Lakshadweep",
+   "state_layers": [
+    {
+     "layer": "basemap:LD_LULC",
+     "label": null,
+     "bbox": [
+      72.16954,
+      8.26337,
+      73.70071,
+      11.69801
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:LD_Lakshadweep_lulc_v2",
+     "display": "Lakshadweep",
+     "bbox": [
+      72.28183,
+      8.26606,
+      73.70254,
+      11.7012
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "MP",
+   "name": "Madhya Pradesh",
+   "state_layers": [
+    {
+     "layer": "basemap:MP_LULC",
+     "label": null,
+     "bbox": [
+      74.03073,
+      21.07326,
+      82.80883,
+      26.8706
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:MP_Agar_Melwa_lulc_v2",
+     "display": "Agar Malwa",
+     "bbox": [
+      75.68732,
+      23.5413,
+      76.41109,
+      24.329
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Alirajpur_lulc_v2",
+     "display": "Alirajpur",
+     "bbox": [
+      74.02874,
+      21.9259,
+      74.747,
+      22.64419
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Anuppur_lulc_v2",
+     "display": "Anuppur",
+     "bbox": [
+      81.12345,
+      22.64413,
+      82.19831,
+      23.42507
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Ashoknagar_lulc_v2",
+     "display": "Ashoknagar",
+     "bbox": [
+      77.47105,
+      24.22939,
+      78.27733,
+      25.00773
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Balaghat_lulc_v2",
+     "display": "Balaghat",
+     "bbox": [
+      79.50958,
+      21.32033,
+      81.04457,
+      22.40159
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Barwani_lulc_v2",
+     "display": "Barwani",
+     "bbox": [
+      74.43159,
+      21.36854,
+      75.62768,
+      22.1343
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Betul_lulc_v2",
+     "display": "Betul",
+     "bbox": [
+      77.06002,
+      21.35748,
+      78.54856,
+      22.4021
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Bhind_lulc_v2",
+     "display": "Bhind",
+     "bbox": [
+      78.20957,
+      25.90699,
+      79.13917,
+      26.7963
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Bhopal_lulc_v2",
+     "display": "Bhopal",
+     "bbox": [
+      77.16462,
+      23.07273,
+      77.6478,
+      23.89529
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Burhanpur_lulc_v2",
+     "display": "Burhanpur",
+     "bbox": [
+      75.94706,
+      21.07078,
+      76.79471,
+      21.59903
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Chhatarpur_lulc_v2",
+     "display": "Chhatarpur",
+     "bbox": [
+      78.98504,
+      24.0967,
+      80.43103,
+      25.42405
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Chhindwara_lulc_v2",
+     "display": "Chhindwara",
+     "bbox": [
+      78.24434,
+      21.46304,
+      79.40591,
+      22.81684
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Damoh_lulc_v2",
+     "display": "Damoh",
+     "bbox": [
+      79.0546,
+      23.15068,
+      79.95467,
+      24.44553
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Datia_lulc_v2",
+     "display": "Datia",
+     "bbox": [
+      78.2137,
+      25.05226,
+      78.89338,
+      26.29046
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Dewas_lulc_v2",
+     "display": "Dewas",
+     "bbox": [
+      75.89638,
+      22.28982,
+      77.13167,
+      23.32195
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Dhar_lulc_v2",
+     "display": "Dhar",
+     "bbox": [
+      74.47067,
+      22.02232,
+      75.71355,
+      23.13524
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Dindori_lulc_v2",
+     "display": "Dindori",
+     "bbox": [
+      80.47663,
+      22.43973,
+      81.73991,
+      23.37455
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_East_Nimar_lulc_v2",
+     "display": "East Nimar",
+     "bbox": [
+      76.01188,
+      21.54214,
+      77.22029,
+      22.41222
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Guna_lulc_v2",
+     "display": "Guna",
+     "bbox": [
+      76.80026,
+      23.88429,
+      77.73495,
+      25.11608
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Gwalior_lulc_v2",
+     "display": "Gwalior",
+     "bbox": [
+      77.66666,
+      25.70862,
+      78.65084,
+      26.34762
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Harda_lulc_v2",
+     "display": "Harda",
+     "bbox": [
+      76.77971,
+      21.90612,
+      77.50936,
+      22.57948
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Hoshangabad_lulc_v2",
+     "display": "Hoshangabad",
+     "bbox": [
+      77.21193,
+      22.2134,
+      78.69821,
+      22.98711
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Indore_lulc_v2",
+     "display": "Indore",
+     "bbox": [
+      75.42245,
+      22.33249,
+      76.24538,
+      23.08899
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Jabalpur_lulc_v2",
+     "display": "Jabalpur",
+     "bbox": [
+      79.34608,
+      22.83081,
+      80.58389,
+      23.46563
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Jhabua_lulc_v2",
+     "display": "Jhabua",
+     "bbox": [
+      74.31822,
+      22.52788,
+      75.01531,
+      23.24455
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Katni_lulc_v2",
+     "display": "Katni",
+     "bbox": [
+      79.80118,
+      23.29995,
+      80.95616,
+      24.13187
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Mandla_lulc_v2",
+     "display": "Mandla",
+     "bbox": [
+      79.95068,
+      22.20225,
+      81.19426,
+      23.17237
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Mandsaur_lulc_v2",
+     "display": "Mandsaur",
+     "bbox": [
+      74.88059,
+      23.7648,
+      75.92266,
+      24.76171
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Morena_lulc_v2",
+     "display": "Morena",
+     "bbox": [
+      77.11381,
+      25.90015,
+      78.54467,
+      26.86955
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Narsimhapur_lulc_v2",
+     "display": "Narsimhapur",
+     "bbox": [
+      78.44256,
+      22.61535,
+      79.64222,
+      23.25344
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Neemuch_lulc_v2",
+     "display": "Neemuch",
+     "bbox": [
+      74.70805,
+      24.21009,
+      75.60791,
+      25.04897
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Panna_lulc_v2",
+     "display": "Panna",
+     "bbox": [
+      79.73403,
+      23.82121,
+      80.67797,
+      25.07864
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Raisen_lulc_v2",
+     "display": "Raisen",
+     "bbox": [
+      77.3378,
+      22.78969,
+      78.8165,
+      23.74547
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Rajgarh_lulc_v2",
+     "display": "Rajgarh",
+     "bbox": [
+      76.18887,
+      23.45742,
+      77.22572,
+      24.28645
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Ratlam_lulc_v2",
+     "display": "Ratlam",
+     "bbox": [
+      74.51336,
+      23.08607,
+      75.6898,
+      23.91929
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Rewa_lulc_v2",
+     "display": "Rewa",
+     "bbox": [
+      81.04482,
+      24.31982,
+      82.30609,
+      25.19218
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Sagar_lulc_v2",
+     "display": "Sagar",
+     "bbox": [
+      78.05906,
+      23.16542,
+      79.35151,
+      24.45203
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Satna_lulc_v2",
+     "display": "Satna",
+     "bbox": [
+      80.35382,
+      23.96735,
+      81.38814,
+      25.18746
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Sehore_lulc_v2",
+     "display": "Sehore",
+     "bbox": [
+      76.4296,
+      22.55538,
+      78.03405,
+      23.67468
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Seoni_lulc_v2",
+     "display": "Seoni",
+     "bbox": [
+      79.19845,
+      21.59467,
+      80.28805,
+      22.95582
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Shahdol_lulc_v2",
+     "display": "Shahdol",
+     "bbox": [
+      80.99795,
+      23.02408,
+      81.98489,
+      24.28209
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Shajapur_lulc_v2",
+     "display": "Shajapur",
+     "bbox": [
+      76.11962,
+      23.10773,
+      77.04907,
+      23.72309
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Sheopur_lulc_v2",
+     "display": "Sheopur",
+     "bbox": [
+      76.47129,
+      25.28211,
+      77.66913,
+      26.21759
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Shivpuri_lulc_v2",
+     "display": "Shivpuri",
+     "bbox": [
+      77.01111,
+      24.83545,
+      78.46755,
+      25.91315
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Sidhi_lulc_v2",
+     "display": "Sidhi",
+     "bbox": [
+      81.30956,
+      23.80639,
+      82.36899,
+      24.61633
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Singrauli_lulc_v2",
+     "display": "Singrauli",
+     "bbox": [
+      81.83691,
+      23.7837,
+      82.80677,
+      24.70258
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Tikamgarh_lulc_v2",
+     "display": "Tikamgarh",
+     "bbox": [
+      78.43418,
+      24.43695,
+      79.34568,
+      25.55715
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Ujjain_lulc_v2",
+     "display": "Ujjain",
+     "bbox": [
+      75.1339,
+      22.82973,
+      76.25371,
+      23.757
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Umaria_lulc_v2",
+     "display": "Umaria",
+     "bbox": [
+      80.52754,
+      23.17454,
+      81.35236,
+      24.09143
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_Vidisha_lulc_v2",
+     "display": "Vidisha",
+     "bbox": [
+      77.25856,
+      23.34361,
+      78.29889,
+      24.34896
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MP_West_Nimar_lulc_v2",
+     "display": "West Nimar",
+     "bbox": [
+      75.20731,
+      21.36879,
+      76.23419,
+      22.54004
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "MH",
+   "name": "Maharashtra",
+   "state_layers": [
+    {
+     "layer": "basemap:MH_LULC",
+     "label": null,
+     "bbox": [
+      72.65315,
+      15.61076,
+      80.89836,
+      22.02657
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:MH_Ahmednagar_lulc_v2",
+     "display": "Ahmednagar",
+     "bbox": [
+      73.616,
+      18.32945,
+      75.58373,
+      19.99545
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Akola_lulc_v2",
+     "display": "Akola",
+     "bbox": [
+      76.69117,
+      20.27532,
+      77.61982,
+      21.24779
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Amravati_lulc_v2",
+     "display": "Amravati",
+     "bbox": [
+      76.622,
+      20.53886,
+      78.44993,
+      21.77003
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Aurangabad_lulc_v2",
+     "display": "Aurangabad",
+     "bbox": [
+      74.5891,
+      19.37858,
+      76.04288,
+      20.66808
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Beed_lulc_v2",
+     "display": "Beed",
+     "bbox": [
+      74.8079,
+      18.5414,
+      76.73397,
+      19.44342
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Bhandara_lulc_v2",
+     "display": "Bhandara",
+     "bbox": [
+      79.44823,
+      20.64152,
+      80.10207,
+      21.60423
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Buldhana_lulc_v2",
+     "display": "Buldhana",
+     "bbox": [
+      75.92203,
+      19.83744,
+      76.82687,
+      21.28961
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Chandrapur_lulc_v2",
+     "display": "Chandrapur",
+     "bbox": [
+      78.79972,
+      19.45907,
+      79.99209,
+      20.7342
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Dhule_lulc_v2",
+     "display": "Dhule",
+     "bbox": [
+      73.84822,
+      20.62721,
+      75.20721,
+      21.63419
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Gadchiroli_lulc_v2",
+     "display": "Gadchiroli",
+     "bbox": [
+      79.74001,
+      18.68015,
+      80.89836,
+      20.8343
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Gondia_lulc_v2",
+     "display": "Gondia",
+     "bbox": [
+      79.79595,
+      20.65505,
+      80.68185,
+      21.63656
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Hingoli_lulc_v2",
+     "display": "Hingoli",
+     "bbox": [
+      76.51265,
+      19.22177,
+      77.48857,
+      20.018
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Jalgaon_lulc_v2",
+     "display": "Jalgaon",
+     "bbox": [
+      74.75996,
+      20.27005,
+      76.39867,
+      21.41518
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Jalna_lulc_v2",
+     "display": "Jalna",
+     "bbox": [
+      75.57023,
+      19.27538,
+      76.53546,
+      20.56105
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Kolhapur_lulc_v2",
+     "display": "Kolhapur",
+     "bbox": [
+      73.68715,
+      15.74296,
+      74.70039,
+      17.18145
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Latur_lulc_v2",
+     "display": "Latur",
+     "bbox": [
+      76.20287,
+      17.87088,
+      77.34449,
+      18.83773
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Mumbai_lulc_v2",
+     "display": "Mumbai",
+     "bbox": [
+      72.79079,
+      18.87872,
+      72.88585,
+      19.05273
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Mumbai_Suburban_lulc_v2",
+     "display": "Mumbai Suburban",
+     "bbox": [
+      72.77483,
+      18.97856,
+      72.98077,
+      19.26886
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Nagpur_lulc_v2",
+     "display": "Nagpur",
+     "bbox": [
+      78.24957,
+      20.58326,
+      79.65649,
+      21.72245
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Nanded_lulc_v2",
+     "display": "Nanded",
+     "bbox": [
+      76.92976,
+      18.26292,
+      78.3651,
+      19.92473
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Nashik_lulc_v2",
+     "display": "Nashik",
+     "bbox": [
+      73.24933,
+      19.58414,
+      74.93517,
+      20.86456
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Osmanabad_lulc_v2",
+     "display": "Osmanabad",
+     "bbox": [
+      75.28501,
+      17.64212,
+      76.79019,
+      18.69811
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Palghar_lulc_v2",
+     "display": "Palghar",
+     "bbox": [
+      72.64265,
+      19.28699,
+      73.504,
+      20.22792
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Parbhani_lulc_v2",
+     "display": "Parbhani",
+     "bbox": [
+      76.20721,
+      18.74993,
+      77.19237,
+      19.83061
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Pune_lulc_v2",
+     "display": "Pune",
+     "bbox": [
+      73.32302,
+      17.89475,
+      75.16322,
+      19.39522
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Raigad_lulc_v2",
+     "display": "Raigad",
+     "bbox": [
+      72.811,
+      17.85074,
+      73.66655,
+      19.13619
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Ratnagiri_lulc_v2",
+     "display": "Ratnagiri",
+     "bbox": [
+      73.02835,
+      16.49343,
+      73.8638,
+      18.07145
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Sangli_lulc_v2",
+     "display": "Sangli",
+     "bbox": [
+      73.69033,
+      16.71569,
+      75.67951,
+      17.63
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Satara_lulc_v2",
+     "display": "Satara",
+     "bbox": [
+      73.53514,
+      17.09062,
+      74.90523,
+      18.18201
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Sindhudurg_lulc_v2",
+     "display": "Sindhudurg",
+     "bbox": [
+      73.31036,
+      15.60633,
+      74.20903,
+      16.66463
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Solapur_lulc_v2",
+     "display": "Solapur",
+     "bbox": [
+      74.60712,
+      17.14557,
+      76.42822,
+      18.5538
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Thane_lulc_v2",
+     "display": "Thane",
+     "bbox": [
+      72.77679,
+      18.9873,
+      73.79701,
+      19.73167
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Wardha_lulc_v2",
+     "display": "Wardha",
+     "bbox": [
+      78.05281,
+      20.29354,
+      79.2224,
+      21.35944
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Washim_lulc_v2",
+     "display": "Washim",
+     "bbox": [
+      76.60672,
+      19.84717,
+      77.6903,
+      20.75696
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MH_Yavatmal_lulc_v2",
+     "display": "Yavatmal",
+     "bbox": [
+      77.28362,
+      19.43023,
+      79.14865,
+      20.6975
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "MN",
+   "name": "Manipur",
+   "state_layers": [
+    {
+     "layer": "basemap:MN_LULC",
+     "label": null,
+     "bbox": [
+      92.9736,
+      23.84273,
+      94.74686,
+      25.69759
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:MN_Bishnupur_lulc_v2",
+     "display": "Bishnupur",
+     "bbox": [
+      93.70194,
+      24.30018,
+      93.89432,
+      24.73961
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MN_Chandel_lulc_v2",
+     "display": "Chandel",
+     "bbox": [
+      93.73935,
+      23.83269,
+      94.40715,
+      24.6487
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MN_Churachandpur_lulc_v2",
+     "display": "Churachandpur",
+     "bbox": [
+      92.9707,
+      23.94148,
+      93.88089,
+      24.72114
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MN_Imphal_East_lulc_v2",
+     "display": "Imphal East",
+     "bbox": [
+      93.07328,
+      24.55246,
+      94.14738,
+      25.09794
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MN_Imphal_West_lulc_v2",
+     "display": "Imphal West",
+     "bbox": [
+      93.77152,
+      24.45644,
+      93.96545,
+      25.13484
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MN_Senapati_lulc_v2",
+     "display": "Senapati",
+     "bbox": [
+      93.6605,
+      24.60818,
+      94.49182,
+      25.61529
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MN_Tamenglong_lulc_v2",
+     "display": "Tamenglong",
+     "bbox": [
+      93.15297,
+      24.49546,
+      93.95539,
+      25.46262
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MN_Thoubal_lulc_v2",
+     "display": "Thoubal",
+     "bbox": [
+      93.83813,
+      24.22071,
+      94.14682,
+      24.7206
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MN_Ukhrul_lulc_v2",
+     "display": "Ukhrul",
+     "bbox": [
+      94.11769,
+      24.48308,
+      94.74547,
+      25.69193
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "ML",
+   "name": "Meghalaya",
+   "state_layers": [
+    {
+     "layer": "basemap:ML_LULC",
+     "label": null,
+     "bbox": [
+      89.82243,
+      25.03182,
+      92.80378,
+      26.11874
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:ML_East_Garo_Hills_lulc_v2",
+     "display": "East Garo Hills",
+     "bbox": [
+      90.31525,
+      25.40998,
+      90.97498,
+      25.81444
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:ML_East_Khasi_Hills_lulc_v2",
+     "display": "East Khasi Hills",
+     "bbox": [
+      91.35673,
+      25.13015,
+      92.14227,
+      25.66925
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:ML_Jaintia_Hills_lulc_v2",
+     "display": "Jaintia Hills",
+     "bbox": [
+      92.17133,
+      25.02952,
+      92.80269,
+      25.46984
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:ML_North_Garo_Hills_lulc_v2",
+     "display": "North Garo Hills",
+     "bbox": [
+      90.33103,
+      25.70494,
+      91.03146,
+      26.0139
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:ML_Ri_Bhoi_lulc_v2",
+     "display": "Ri Bhoi",
+     "bbox": [
+      91.34482,
+      25.63317,
+      92.27409,
+      26.11752
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:ML_South_Garo_Hills_lulc_v2",
+     "display": "South Garo Hills",
+     "bbox": [
+      90.23317,
+      25.14587,
+      90.9735,
+      25.56248
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:ML_South_Khasi_Hills_lulc_v2",
+     "display": "South Khasi Hills",
+     "bbox": [
+      90.8586,
+      25.17393,
+      91.55208,
+      25.45096
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:ML_Southwest_Garo_Hills_lulc_v2",
+     "display": "Southwest Garo Hills",
+     "bbox": [
+      89.82124,
+      25.28515,
+      90.16521,
+      25.59169
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:ML_West_Garo_Hills_lulc_v2",
+     "display": "West Garo Hills",
+     "bbox": [
+      89.89582,
+      25.18489,
+      90.42588,
+      26.01333
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:ML_West_Jaintia_Hills_lulc_v2",
+     "display": "West Jaintia Hills",
+     "bbox": [
+      91.98511,
+      25.12145,
+      92.66123,
+      25.7516
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:ML_West_Khasi_Hills_lulc_v2",
+     "display": "West Khasi Hills",
+     "bbox": [
+      90.75198,
+      25.29485,
+      91.82977,
+      25.85562
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "MZ",
+   "name": "Mizoram",
+   "state_layers": [
+    {
+     "layer": "basemap:MZ_LULC",
+     "label": null,
+     "bbox": [
+      92.25958,
+      21.94771,
+      93.43763,
+      24.52085
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:MZ_Aizwal_lulc_v2",
+     "display": "Aizawl",
+     "bbox": [
+      92.5957,
+      23.31124,
+      93.18969,
+      24.41321
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MZ_Champai_lulc_v2",
+     "display": "Champhai",
+     "bbox": [
+      93.00476,
+      23.00361,
+      93.43741,
+      24.08494
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MZ_Kolasib_lulc_v2",
+     "display": "Kolasib",
+     "bbox": [
+      92.52743,
+      23.85504,
+      92.90037,
+      24.52298
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MZ_Lawngtalai_lulc_v2",
+     "display": "Lawngtlai",
+     "bbox": [
+      92.50466,
+      21.97518,
+      93.14079,
+      22.80862
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MZ_Lunglei_lulc_v2",
+     "display": "Lunglei",
+     "bbox": [
+      92.34406,
+      22.5,
+      93.16453,
+      23.40714
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MZ_Mamit_lulc_v2",
+     "display": "Mamit",
+     "bbox": [
+      92.25709,
+      23.25622,
+      92.67427,
+      24.2549
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MZ_Sahia_lulc_v2",
+     "display": "Saiha",
+     "bbox": [
+      92.82015,
+      21.94011,
+      93.20231,
+      22.63394
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:MZ_Serchip_lulc_v2",
+     "display": "Serchhip",
+     "bbox": [
+      92.68278,
+      23.00825,
+      93.18044,
+      23.59972
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "NL",
+   "name": "Nagaland",
+   "state_layers": [
+    {
+     "layer": "basemap:NL_LULC",
+     "label": null,
+     "bbox": [
+      93.33174,
+      25.20212,
+      95.24492,
+      27.0368
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:NL_Dimapur_lulc_v2",
+     "display": "Dimapur",
+     "bbox": [
+      93.54396,
+      25.67105,
+      93.98246,
+      25.96191
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:NL_Kohima_lulc_v2",
+     "display": "Kohima",
+     "bbox": [
+      93.33183,
+      25.19936,
+      94.36438,
+      26.02442
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:NL_Mokokchung_lulc_v2",
+     "display": "Mokokchung",
+     "bbox": [
+      94.29273,
+      26.1923,
+      94.76004,
+      26.76363
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:NL_Mon_lulc_v2",
+     "display": "Mon",
+     "bbox": [
+      94.7831,
+      26.43396,
+      95.2422,
+      27.03518
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:NL_Phek_lulc_v2",
+     "display": "Phek",
+     "bbox": [
+      94.18921,
+      25.44883,
+      94.8983,
+      25.92379
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:NL_Tuensang_lulc_v2",
+     "display": "Tuensang",
+     "bbox": [
+      94.56489,
+      25.58915,
+      95.18443,
+      26.79616
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:NL_Wokha_lulc_v2",
+     "display": "Wokha",
+     "bbox": [
+      93.95489,
+      25.92081,
+      94.39084,
+      26.55911
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:NL_Zunheboto_lulc_v2",
+     "display": "Zunheboto",
+     "bbox": [
+      94.33743,
+      25.75706,
+      94.71548,
+      26.28992
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "OR",
+   "name": "Odisha",
+   "state_layers": [
+    {
+     "layer": "basemap:OR_LULC",
+     "label": null,
+     "bbox": [
+      81.3399,
+      17.79353,
+      87.48491,
+      22.56761
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:OR_Anugul_lulc_v2",
+     "display": "Angul",
+     "bbox": [
+      84.26194,
+      20.52834,
+      85.39337,
+      21.67939
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Balangir_lulc_v2",
+     "display": "Balangir",
+     "bbox": [
+      82.68307,
+      20.14733,
+      83.67813,
+      21.07106
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Baleshwar_lulc_v2",
+     "display": "Baleshwar",
+     "bbox": [
+      86.35296,
+      21.06229,
+      87.486,
+      21.97944
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Bargarh_lulc_v2",
+     "display": "Bargarh",
+     "bbox": [
+      82.63591,
+      20.7224,
+      83.91266,
+      21.74432
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Bhadrak_lulc_v2",
+     "display": "Bhadrak",
+     "bbox": [
+      86.27101,
+      20.73186,
+      86.98386,
+      21.23802
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Baudh_lulc_v2",
+     "display": "Boudh",
+     "bbox": [
+      83.56886,
+      20.3847,
+      84.79117,
+      20.89602
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Cuttack_lulc_v2",
+     "display": "Cuttack",
+     "bbox": [
+      84.84827,
+      20.03928,
+      86.28086,
+      20.70259
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Debagarh_lulc_v2",
+     "display": "Deogarh",
+     "bbox": [
+      84.39228,
+      21.13071,
+      85.2129,
+      21.76579
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Dhenkanal_lulc_v2",
+     "display": "Dhenkanal",
+     "bbox": [
+      85.11374,
+      20.48554,
+      86.03204,
+      21.18681
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Gajapati_lulc_v2",
+     "display": "Gajapati",
+     "bbox": [
+      83.79353,
+      18.75689,
+      84.43942,
+      19.63754
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Ganjam_lulc_v2",
+     "display": "Ganjam",
+     "bbox": [
+      84.13097,
+      18.93892,
+      85.18275,
+      20.28116
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Jagatsinghpur_lulc_v2",
+     "display": "Jagatsinghpur",
+     "bbox": [
+      86.01264,
+      19.96056,
+      86.77898,
+      20.40258
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Jajapur_lulc_v2",
+     "display": "Jajpur",
+     "bbox": [
+      85.68166,
+      20.57899,
+      86.62422,
+      21.17009
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Jharsuguda_lulc_v2",
+     "display": "Jharsuguda",
+     "bbox": [
+      83.41919,
+      21.56372,
+      84.38922,
+      22.03896
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Kalahandi_lulc_v2",
+     "display": "Kalahandi",
+     "bbox": [
+      82.52472,
+      19.19748,
+      83.79099,
+      20.45488
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Kandhamal_lulc_v2",
+     "display": "Kandhamal",
+     "bbox": [
+      83.49537,
+      19.56751,
+      84.58755,
+      20.68962
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Kendrapara_lulc_v2",
+     "display": "Kendrapara",
+     "bbox": [
+      86.24604,
+      20.29681,
+      87.05554,
+      20.79817
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Kendujhar_lulc_v2",
+     "display": "Kendujhar",
+     "bbox": [
+      85.18421,
+      21.01479,
+      86.37219,
+      22.16272
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Khordha_lulc_v2",
+     "display": "Khordha",
+     "bbox": [
+      84.93506,
+      19.67199,
+      86.07901,
+      20.43606
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Koraput_lulc_v2",
+     "display": "Koraput",
+     "bbox": [
+      82.08863,
+      18.2371,
+      83.41455,
+      19.21107
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Malkangiri_lulc_v2",
+     "display": "Malkangiri",
+     "bbox": [
+      81.38872,
+      17.81246,
+      82.41463,
+      18.74021
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Mayurbhanj_lulc_v2",
+     "display": "Mayurbhanj",
+     "bbox": [
+      85.66227,
+      21.26542,
+      87.18384,
+      22.56802
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Nabarangapur_lulc_v2",
+     "display": "Nabarangapur",
+     "bbox": [
+      81.84523,
+      19.11477,
+      82.85663,
+      20.10524
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Nayagarh_lulc_v2",
+     "display": "Nayagarh",
+     "bbox": [
+      84.48506,
+      19.89748,
+      85.45464,
+      20.58153
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Nuapada_lulc_v2",
+     "display": "Nuapada",
+     "bbox": [
+      82.33168,
+      19.99031,
+      82.86104,
+      21.09088
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Puri_lulc_v2",
+     "display": "Puri",
+     "bbox": [
+      85.13504,
+      19.4673,
+      86.38082,
+      20.20378
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Rayagada_lulc_v2",
+     "display": "Rayagada",
+     "bbox": [
+      82.87027,
+      18.91099,
+      84.03325,
+      19.97375
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Sambalpur_lulc_v2",
+     "display": "Sambalpur",
+     "bbox": [
+      83.79876,
+      20.92237,
+      84.77029,
+      22.19038
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Sonapur_lulc_v2",
+     "display": "Sonapur",
+     "bbox": [
+      83.44557,
+      20.52792,
+      84.27937,
+      21.17819
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:OR_Sundargarh_lulc_v2",
+     "display": "Sundargarh",
+     "bbox": [
+      83.53651,
+      21.58927,
+      85.37684,
+      22.5325
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "PY",
+   "name": "Puducherry",
+   "state_layers": [
+    {
+     "layer": "basemap:PY1_LULC",
+     "label": "Puducherry",
+     "bbox": [
+      79.60239,
+      11.77416,
+      79.87279,
+      12.04895
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    },
+    {
+     "layer": "basemap:PY2_LULC",
+     "label": "Karaikal",
+     "bbox": [
+      79.7215,
+      10.8265,
+      79.85384,
+      11.0024
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    },
+    {
+     "layer": "basemap:PY3_LULC",
+     "label": "Mahe",
+     "bbox": [
+      75.53624,
+      11.72194,
+      75.55912,
+      11.73143
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    },
+    {
+     "layer": "basemap:PY4_LULC",
+     "label": "Yanam",
+     "bbox": [
+      82.18757,
+      16.70147,
+      82.31236,
+      16.7617
+     ],
+     "queryable": true,
+     "scale_hint_max": null
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:PY_Karaikal_lulc_v2",
+     "display": "Karaikal",
+     "bbox": [
+      79.71902,
+      10.82579,
+      79.85364,
+      11.00526
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PY_Mahe_lulc_v2",
+     "display": "Mahe",
+     "bbox": [
+      75.52554,
+      11.6905,
+      75.56154,
+      11.76156
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PY_Pondicherry_lulc_v2",
+     "display": "Puducherry",
+     "bbox": [
+      79.59886,
+      11.77329,
+      79.87594,
+      12.0511
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PY_Yanam_lulc_v2",
+     "display": "Yanam",
+     "bbox": [
+      82.17949,
+      16.69639,
+      82.31705,
+      16.76721
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "PB",
+   "name": "Punjab",
+   "state_layers": [
+    {
+     "layer": "basemap:PB_LULC",
+     "label": null,
+     "bbox": [
+      73.90526,
+      29.57231,
+      76.92951,
+      32.51134
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:PB_Amritsar_lulc_v2",
+     "display": "Amritsar",
+     "bbox": [
+      74.48698,
+      31.48203,
+      75.40458,
+      32.05547
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Barnala_lulc_v2",
+     "display": "Barnala",
+     "bbox": [
+      75.25472,
+      30.13893,
+      75.73099,
+      30.60603
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Bathinda_lulc_v2",
+     "display": "Bathinda",
+     "bbox": [
+      74.6311,
+      29.7751,
+      75.37763,
+      30.58181
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Chandigarh_lulc_v2",
+     "display": "Chandigarh",
+     "bbox": [
+      76.70735,
+      30.66692,
+      76.85056,
+      30.79466
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Faridkot_lulc_v2",
+     "display": "Faridkot",
+     "bbox": [
+      74.47028,
+      30.36702,
+      75.05513,
+      30.83698
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Fatehgarh_Sahib_lulc_v2",
+     "display": "Fatehgarh Sahib",
+     "bbox": [
+      76.07816,
+      30.43675,
+      76.6356,
+      30.87979
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Fazilka_lulc_v2",
+     "display": "Fazilka",
+     "bbox": [
+      73.88096,
+      29.94755,
+      74.46824,
+      30.66566
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Firozpur_lulc_v2",
+     "display": "Firozpur",
+     "bbox": [
+      74.19558,
+      30.53806,
+      75.13976,
+      31.16189
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Gurdaspur_lulc_v2",
+     "display": "Gurdaspur",
+     "bbox": [
+      74.88988,
+      31.59467,
+      75.60069,
+      32.21448
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Hoshiarpur_lulc_v2",
+     "display": "Hoshiarpur",
+     "bbox": [
+      75.4738,
+      31.13276,
+      76.34944,
+      32.08661
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Jalandhar_lulc_v2",
+     "display": "Jalandhar",
+     "bbox": [
+      75.07845,
+      30.96979,
+      75.95744,
+      31.61666
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Kapurthala_lulc_v2",
+     "display": "Kapurthala",
+     "bbox": [
+      74.96248,
+      31.12082,
+      75.90977,
+      31.65127
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Ludhiana_lulc_v2",
+     "display": "Ludhiana",
+     "bbox": [
+      75.35732,
+      30.55984,
+      76.3268,
+      31.0192
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Mansa_lulc_v2",
+     "display": "Mansa",
+     "bbox": [
+      75.17013,
+      29.54375,
+      75.77665,
+      30.20927
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Moga_lulc_v2",
+     "display": "Moga",
+     "bbox": [
+      74.90487,
+      30.48634,
+      75.42052,
+      31.10419
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Mohali_lulc_v2",
+     "display": "Mohali",
+     "bbox": [
+      76.52219,
+      30.36082,
+      76.94305,
+      30.93963
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Muktsar_lulc_v2",
+     "display": "Muktsar",
+     "bbox": [
+      74.249,
+      29.9045,
+      74.82272,
+      30.66915
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Pathankot_lulc_v2",
+     "display": "Pathankot",
+     "bbox": [
+      75.32211,
+      32.08692,
+      75.93485,
+      32.51134
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Patiala_lulc_v2",
+     "display": "Patiala",
+     "bbox": [
+      75.93034,
+      29.79164,
+      76.79568,
+      30.62831
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Rupnagar_lulc_v2",
+     "display": "Rupnagar",
+     "bbox": [
+      76.28859,
+      30.74643,
+      76.73816,
+      31.43755
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_SBS_Nagar_lulc_v2",
+     "display": "SBS Nagar",
+     "bbox": [
+      75.78747,
+      30.96941,
+      76.51474,
+      31.28435
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Sangrur_lulc_v2",
+     "display": "Sangrur",
+     "bbox": [
+      75.55646,
+      29.72718,
+      76.2044,
+      30.68918
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:PB_Taran_Taran_lulc_v2",
+     "display": "Tarn Taran",
+     "bbox": [
+      74.51057,
+      31.06997,
+      75.27696,
+      31.57114
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "RJ",
+   "name": "Rajasthan",
+   "state_layers": [
+    {
+     "layer": "basemap:RJ1_LULC",
+     "label": "Part 1",
+     "bbox": [
+      69.52756,
+      23.07623,
+      78.25853,
+      30.18946
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    },
+    {
+     "layer": "basemap:RJ2_LULC",
+     "label": "Part 2",
+     "bbox": [
+      70.35051,
+      23.08505,
+      78.23931,
+      30.05945
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:RJ_Ajmer_lulc_v2",
+     "display": "Ajmer",
+     "bbox": [
+      73.90618,
+      25.65061,
+      75.35544,
+      26.97702
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Alwar_lulc_v2",
+     "display": "Alwar",
+     "bbox": [
+      76.1247,
+      27.05595,
+      77.20971,
+      28.22148
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Banswara_lulc_v2",
+     "display": "Banswara",
+     "bbox": [
+      73.95946,
+      23.06046,
+      74.77451,
+      23.92442
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Baran_lulc_v2",
+     "display": "Baran",
+     "bbox": [
+      76.21804,
+      24.40477,
+      77.4238,
+      25.4318
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Barmer_lulc_v2",
+     "display": "Barmer",
+     "bbox": [
+      70.08581,
+      24.64849,
+      72.84857,
+      26.51387
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Bharatpur_lulc_v2",
+     "display": "Bharatpur",
+     "bbox": [
+      76.88124,
+      26.70694,
+      77.76323,
+      27.81642
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Bhilwara_lulc_v2",
+     "display": "Bhilwara",
+     "bbox": [
+      74.01248,
+      25.01439,
+      75.46442,
+      25.96226
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Bikaner_lulc_v2",
+     "display": "Bikaner",
+     "bbox": [
+      71.89757,
+      27.18655,
+      74.35913,
+      29.05175
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Bundi_lulc_v2",
+     "display": "Bundi",
+     "bbox": [
+      75.26478,
+      24.99621,
+      76.32538,
+      25.88183
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Chittaurgarh_lulc_v2",
+     "display": "Chittorgarh",
+     "bbox": [
+      74.10661,
+      24.22182,
+      75.82184,
+      25.21721
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Churu_lulc_v2",
+     "display": "Churu",
+     "bbox": [
+      73.85893,
+      27.41056,
+      75.67382,
+      28.99858
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Dausa_lulc_v2",
+     "display": "Dausa",
+     "bbox": [
+      76.15345,
+      26.37678,
+      77.08366,
+      27.23301
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Dhaulpur_lulc_v2",
+     "display": "Dhaulpur",
+     "bbox": [
+      77.22715,
+      26.35692,
+      78.27075,
+      26.95
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Dungarpur_lulc_v2",
+     "display": "Dungarpur",
+     "bbox": [
+      73.35705,
+      23.33421,
+      74.38407,
+      24.01926
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Ganganagar_lulc_v2",
+     "display": "Ganganagar",
+     "bbox": [
+      72.64845,
+      28.71379,
+      74.30581,
+      30.19643
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Hanumangarh_lulc_v2",
+     "display": "Hanumangarh",
+     "bbox": [
+      73.7996,
+      28.77722,
+      75.52546,
+      29.9564
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Jaipur_lulc_v2",
+     "display": "Jaipur",
+     "bbox": [
+      74.95,
+      26.45,
+      76.2931,
+      27.86395
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Jaisalmer_lulc_v2",
+     "display": "Jaisalmer",
+     "bbox": [
+      69.48437,
+      26.02177,
+      72.34313,
+      28.03658
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Jalore_lulc_v2",
+     "display": "Jalore",
+     "bbox": [
+      71.18799,
+      24.60742,
+      73.09685,
+      25.80877
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Jhalawar_lulc_v2",
+     "display": "Jhalawar",
+     "bbox": [
+      75.45722,
+      23.75685,
+      76.94904,
+      24.87214
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Jhunjhunun_lulc_v2",
+     "display": "Jhunjhunun",
+     "bbox": [
+      75.02748,
+      27.6431,
+      76.10108,
+      28.51717
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Jodhpur_lulc_v2",
+     "display": "Jodhpur",
+     "bbox": [
+      71.78866,
+      25.85286,
+      73.87311,
+      27.61846
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Karauli_lulc_v2",
+     "display": "Karauli",
+     "bbox": [
+      76.49098,
+      26.03447,
+      77.39382,
+      26.99925
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Kota_lulc_v2",
+     "display": "Kota",
+     "bbox": [
+      75.6236,
+      24.53962,
+      76.58322,
+      25.84285
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Nagaur_lulc_v2",
+     "display": "Nagaur",
+     "bbox": [
+      73.11399,
+      26.40892,
+      75.36901,
+      27.70595
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Pali_lulc_v2",
+     "display": "Pali",
+     "bbox": [
+      72.77774,
+      24.75711,
+      74.40194,
+      26.46128
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Pratapgarh_lulc_v2",
+     "display": "Pratapgarh",
+     "bbox": [
+      74.29634,
+      23.53115,
+      74.99341,
+      24.50775
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Rajsamand_lulc_v2",
+     "display": "Rajsamand",
+     "bbox": [
+      73.50031,
+      24.73507,
+      74.39148,
+      26.02259
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Sawai_Madhopur_lulc_v2",
+     "display": "Sawai Madhopur",
+     "bbox": [
+      75.98156,
+      25.73839,
+      76.98271,
+      26.71887
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Sikar_lulc_v2",
+     "display": "Sikar",
+     "bbox": [
+      74.68105,
+      27.12309,
+      76.09746,
+      28.2
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Sirohi_lulc_v2",
+     "display": "Sirohi",
+     "bbox": [
+      72.24516,
+      24.32652,
+      73.1636,
+      25.28713
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Tonk_lulc_v2",
+     "display": "Tonk",
+     "bbox": [
+      75.11342,
+      25.67695,
+      76.32746,
+      26.56393
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:RJ_Udaipur_lulc_v2",
+     "display": "Udaipur",
+     "bbox": [
+      73.0058,
+      23.80603,
+      74.43807,
+      25.11799
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "SK",
+   "name": "Sikkim",
+   "state_layers": [
+    {
+     "layer": "basemap:SK_LULC",
+     "label": null,
+     "bbox": [
+      88.01171,
+      27.08161,
+      88.91723,
+      28.03569
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:SK_East_Sikkim_lulc_v2",
+     "display": "East Sikkim",
+     "bbox": [
+      88.43746,
+      27.13542,
+      88.92177,
+      27.4208
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:SK_North_Sikkim_lulc_v2",
+     "display": "North Sikkim",
+     "bbox": [
+      88.11134,
+      27.36517,
+      88.88822,
+      28.12761
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:SK_South_Sikkim_lulc_v2",
+     "display": "South Sikkim",
+     "bbox": [
+      88.27472,
+      27.07944,
+      88.53469,
+      27.53177
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:SK_West_Sikkim_lulc_v2",
+     "display": "West Sikkim",
+     "bbox": [
+      88.01306,
+      27.10969,
+      88.35748,
+      27.61028
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "TN",
+   "name": "Tamil Nadu",
+   "state_layers": [
+    {
+     "layer": "basemap:TN_LULC",
+     "label": null,
+     "bbox": [
+      76.24292,
+      8.07746,
+      80.3388,
+      13.56351
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:TN_Ariyalur_lulc_v2",
+     "display": "Ariyalur",
+     "bbox": [
+      78.93894,
+      10.88297,
+      79.51387,
+      11.41967
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Chennai_lulc_v2",
+     "display": "Chennai",
+     "bbox": [
+      80.18307,
+      12.96594,
+      80.30354,
+      13.14781
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Coimbatore_lulc_v2",
+     "display": "Coimbatore",
+     "bbox": [
+      76.65772,
+      10.22012,
+      77.50307,
+      11.40535
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Cuddalore_lulc_v2",
+     "display": "Cuddalore",
+     "bbox": [
+      78.8758,
+      11.14912,
+      79.81297,
+      11.88838
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Dharmapuri_lulc_v2",
+     "display": "Dharmapuri",
+     "bbox": [
+      77.47304,
+      11.77193,
+      78.74729,
+      12.88765
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Dindigul_lulc_v2",
+     "display": "Dindigul",
+     "bbox": [
+      77.26763,
+      10.01791,
+      78.33771,
+      10.83399
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Erode_lulc_v2",
+     "display": "Erode",
+     "bbox": [
+      76.83711,
+      10.60503,
+      77.93227,
+      11.95363
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Kancheepuram_lulc_v2",
+     "display": "Kancheepuram",
+     "bbox": [
+      79.55968,
+      12.22876,
+      80.26641,
+      13.06301
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Kanniyakumari_lulc_v2",
+     "display": "Kanniyakumari",
+     "bbox": [
+      77.10006,
+      8.07794,
+      77.59088,
+      8.57938
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Karur_lulc_v2",
+     "display": "Karur",
+     "bbox": [
+      77.74981,
+      10.54667,
+      78.59437,
+      11.20626
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Madurai_lulc_v2",
+     "display": "Madurai",
+     "bbox": [
+      77.46438,
+      9.56263,
+      78.47171,
+      10.30905
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Nagapattinam_lulc_v2",
+     "display": "Nagapattinam",
+     "bbox": [
+      79.50987,
+      10.2736,
+      79.87911,
+      11.41746
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Namakkal_lulc_v2",
+     "display": "Namakkal",
+     "bbox": [
+      77.68349,
+      11.01091,
+      78.48672,
+      11.5936
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Perambalur_lulc_v2",
+     "display": "Perambalur",
+     "bbox": [
+      78.41534,
+      10.94702,
+      79.17001,
+      11.5196
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Pudukkottai_lulc_v2",
+     "display": "Pudukkottai",
+     "bbox": [
+      78.44964,
+      9.84677,
+      79.26372,
+      10.73219
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Ramanathapuram_lulc_v2",
+     "display": "Ramanathapuram",
+     "bbox": [
+      78.21554,
+      9.08714,
+      79.42691,
+      9.94533
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Salem_lulc_v2",
+     "display": "Salem",
+     "bbox": [
+      77.6494,
+      11.314,
+      78.84493,
+      11.975
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Sivaganga_lulc_v2",
+     "display": "Sivaganga",
+     "bbox": [
+      78.12616,
+      9.51858,
+      79.01455,
+      10.40718
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Thanjavur_lulc_v2",
+     "display": "Thanjavur",
+     "bbox": [
+      78.77825,
+      10.13883,
+      79.57393,
+      11.18079
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_The_Nilgiris_lulc_v2",
+     "display": "The Nilgiris",
+     "bbox": [
+      76.23317,
+      11.18903,
+      77.01602,
+      11.70487
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Theni_lulc_v2",
+     "display": "Theni",
+     "bbox": [
+      77.16731,
+      9.5192,
+      77.72947,
+      10.21519
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Thiruvallur_lulc_v2",
+     "display": "Thiruvallur",
+     "bbox": [
+      79.28576,
+      12.94644,
+      80.34631,
+      13.56244
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Thiruvarur_lulc_v2",
+     "display": "Thiruvarur",
+     "bbox": [
+      79.29974,
+      10.29996,
+      79.83722,
+      11.01588
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Thoothukkudi_lulc_v2",
+     "display": "Thoothukkudi",
+     "bbox": [
+      77.67358,
+      8.32132,
+      78.38844,
+      9.37106
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Tirunelveli_lulc_v2",
+     "display": "Tirunelveli",
+     "bbox": [
+      77.14926,
+      8.14257,
+      77.97589,
+      9.4173
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Tiruvannamalai_lulc_v2",
+     "display": "Tiruvannamalai",
+     "bbox": [
+      78.63316,
+      11.97962,
+      79.75691,
+      12.87238
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Vellore_lulc_v2",
+     "display": "Vellore",
+     "bbox": [
+      78.40786,
+      12.25781,
+      79.78981,
+      13.2083
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Viluppuram_lulc_v2",
+     "display": "Viluppuram",
+     "bbox": [
+      78.62698,
+      11.50233,
+      80.00479,
+      12.4494
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TN_Virudhunagar_lulc_v2",
+     "display": "Virudhunagar",
+     "bbox": [
+      77.34061,
+      9.19868,
+      78.41855,
+      9.78491
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "TS",
+   "name": "Telangana",
+   "state_layers": [],
+   "districts": [
+    {
+     "layer": "sisdpv2:TS_Adilabad_lulc_v2",
+     "display": "Adilabad",
+     "bbox": [
+      77.76186,
+      18.67204,
+      79.97762,
+      19.91698
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TS_Hyderabad_lulc_v2",
+     "display": "Hyderabad",
+     "bbox": [
+      78.38199,
+      17.29313,
+      78.55632,
+      17.48431
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TS_Karimnagar_lulc_v2",
+     "display": "Karimnagar",
+     "bbox": [
+      78.51899,
+      17.98339,
+      80.34719,
+      19.07989
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TS_Khammam_lulc_v2",
+     "display": "Khammam",
+     "bbox": [
+      79.80125,
+      16.76919,
+      81.31615,
+      18.62943
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TS_Mahabubnagar_lulc_v2",
+     "display": "Mahabubnagar",
+     "bbox": [
+      77.2369,
+      15.83731,
+      79.23426,
+      17.23788
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TS_Medak_lulc_v2",
+     "display": "Medak",
+     "bbox": [
+      77.44404,
+      17.42749,
+      79.12617,
+      18.28783
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TS_Nalgonda_lulc_v2",
+     "display": "Nalgonda",
+     "bbox": [
+      78.61616,
+      16.35596,
+      80.07295,
+      17.81267
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TS_Nizamabad_lulc_v2",
+     "display": "Nizamabad",
+     "bbox": [
+      77.52065,
+      18.06942,
+      78.66096,
+      19.01581
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TS_Rangareddy_lulc_v2",
+     "display": "Rangareddy",
+     "bbox": [
+      77.36283,
+      16.84499,
+      78.84398,
+      17.70855
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TS_Warangal_lulc_v2",
+     "display": "Warangal",
+     "bbox": [
+      78.82729,
+      17.32119,
+      80.70882,
+      18.60977
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "TR",
+   "name": "Tripura",
+   "state_layers": [
+    {
+     "layer": "basemap:TR_LULC",
+     "label": null,
+     "bbox": [
+      91.15665,
+      22.94487,
+      92.33684,
+      24.52751
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:TR_Dhalai_lulc_v2",
+     "display": "Dhalai",
+     "bbox": [
+      91.74486,
+      23.4257,
+      92.17619,
+      24.24815
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TR_Gomati_lulc_v2",
+     "display": "Gomati",
+     "bbox": [
+      91.3781,
+      23.0828,
+      91.88317,
+      23.76639
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TR_Khowai_lulc_v2",
+     "display": "Khowai",
+     "bbox": [
+      91.48188,
+      23.67707,
+      91.78534,
+      24.23417
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TR_North_lulc_v2",
+     "display": "North",
+     "bbox": [
+      92.07145,
+      23.65287,
+      92.33514,
+      24.53277
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TR_Sepahijala_lulc_v2",
+     "display": "Sepahijala",
+     "bbox": [
+      91.14916,
+      23.28051,
+      91.57109,
+      23.78449
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TR_South_lulc_v2",
+     "display": "South",
+     "bbox": [
+      91.31,
+      22.93718,
+      91.82252,
+      23.42505
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TR_Unakoti_lulc_v2",
+     "display": "Unakoti",
+     "bbox": [
+      91.90349,
+      23.98084,
+      92.20382,
+      24.3943
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:TR_West_lulc_v2",
+     "display": "West",
+     "bbox": [
+      91.22256,
+      23.71921,
+      91.57093,
+      24.11217
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "UP",
+   "name": "Uttar Pradesh",
+   "state_layers": [
+    {
+     "layer": "basemap:UP_LULC",
+     "label": null,
+     "bbox": [
+      77.09484,
+      23.87032,
+      84.63401,
+      30.4076
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:UP_Agra_lulc_v2",
+     "display": "Agra",
+     "bbox": [
+      77.42308,
+      26.7417,
+      78.85472,
+      27.40978
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Aligarh_lulc_v2",
+     "display": "Aligarh",
+     "bbox": [
+      77.48797,
+      27.57198,
+      78.60907,
+      28.17941
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Allahabad_lulc_v2",
+     "display": "Allahabad",
+     "bbox": [
+      81.51877,
+      24.80419,
+      82.3546,
+      25.75325
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Ambedkar_Nagar_lulc_v2",
+     "display": "Ambedkar Nagar",
+     "bbox": [
+      82.22025,
+      26.15639,
+      83.13416,
+      26.67252
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Amethi_lulc_v2",
+     "display": "Amethi",
+     "bbox": [
+      81.30814,
+      25.92711,
+      82.07462,
+      26.66623
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Auraiya_lulc_v2",
+     "display": "Auraiya",
+     "bbox": [
+      79.20747,
+      26.36396,
+      79.75823,
+      26.94654
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Azamgarh_lulc_v2",
+     "display": "Azamgarh",
+     "bbox": [
+      82.66678,
+      25.63527,
+      83.50609,
+      26.41218
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Baghpat_lulc_v2",
+     "display": "Baghpat",
+     "bbox": [
+      77.13314,
+      28.77683,
+      77.50623,
+      29.29753
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Bahraich_lulc_v2",
+     "display": "Bahraich",
+     "bbox": [
+      81.04,
+      27.05882,
+      81.99807,
+      28.40166
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Ballia_lulc_v2",
+     "display": "Ballia",
+     "bbox": [
+      83.67628,
+      25.55708,
+      84.63682,
+      26.19144
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Balrampur_lulc_v2",
+     "display": "Balrampur",
+     "bbox": [
+      82.02342,
+      27.05146,
+      82.7666,
+      27.84406
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Banda_lulc_v2",
+     "display": "Banda",
+     "bbox": [
+      80.10529,
+      24.97361,
+      81.03808,
+      25.91343
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Bara_Banki_lulc_v2",
+     "display": "Barabanki",
+     "bbox": [
+      80.92564,
+      26.52496,
+      81.8124,
+      27.35914
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Bareilly_lulc_v2",
+     "display": "Bareilly",
+     "bbox": [
+      78.9708,
+      28.0165,
+      79.79317,
+      28.90213
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Basti_lulc_v2",
+     "display": "Basti",
+     "bbox": [
+      82.23054,
+      26.55624,
+      82.9796,
+      27.11579
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Bhimnagar_lulc_v2",
+     "display": "Bhimnagar",
+     "bbox": [
+      78.2719,
+      28.04357,
+      78.96074,
+      28.81035
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Bijnor_lulc_v2",
+     "display": "Bijnor",
+     "bbox": [
+      77.99797,
+      29.01859,
+      78.94426,
+      29.78392
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Budaun_lulc_v2",
+     "display": "Budaun",
+     "bbox": [
+      78.57407,
+      27.65803,
+      79.51856,
+      28.47222
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Bulandshahr_lulc_v2",
+     "display": "Bulandshahr",
+     "bbox": [
+      77.61323,
+      28.05906,
+      78.49033,
+      28.71539
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Chandauli_lulc_v2",
+     "display": "Chandauli",
+     "bbox": [
+      83.01108,
+      24.71591,
+      83.55667,
+      25.53479
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Chitrakoot_lulc_v2",
+     "display": "Chitrakoot",
+     "bbox": [
+      80.63024,
+      24.88711,
+      81.56396,
+      25.54649
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Deoria_lulc_v2",
+     "display": "Deoria",
+     "bbox": [
+      83.47878,
+      26.08898,
+      84.18809,
+      26.75889
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Etah_lulc_v2",
+     "display": "Etah",
+     "bbox": [
+      78.1748,
+      27.32458,
+      79.27835,
+      27.78578
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Etawah_lulc_v2",
+     "display": "Etawah",
+     "bbox": [
+      78.74271,
+      26.42475,
+      79.35097,
+      27.0063
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Faizabad_lulc_v2",
+     "display": "Faizabad",
+     "bbox": [
+      81.54505,
+      26.40712,
+      82.48208,
+      26.88802
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Farrukhabad_lulc_v2",
+     "display": "Farrukhabad",
+     "bbox": [
+      79.12125,
+      27.15658,
+      79.73854,
+      27.71525
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Fatehpur_lulc_v2",
+     "display": "Fatehpur",
+     "bbox": [
+      80.21459,
+      25.43787,
+      81.33997,
+      26.23095
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Firozabad_lulc_v2",
+     "display": "Firozabad",
+     "bbox": [
+      78.19437,
+      26.87641,
+      78.82294,
+      27.51065
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Gautam_Buddha_Nagar_lulc_v2",
+     "display": "Gautam Buddha Nagar",
+     "bbox": [
+      77.29779,
+      28.08477,
+      77.74026,
+      28.68712
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Ghaziabad_lulc_v2",
+     "display": "Ghaziabad",
+     "bbox": [
+      77.20066,
+      28.62236,
+      77.7614,
+      28.92726
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Ghazipur_lulc_v2",
+     "display": "Ghazipur",
+     "bbox": [
+      83.06476,
+      25.30517,
+      83.96464,
+      25.89966
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Gonda_lulc_v2",
+     "display": "Gonda",
+     "bbox": [
+      81.5067,
+      26.78075,
+      82.61587,
+      27.43945
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Gorakhpur_lulc_v2",
+     "display": "Gorakhpur",
+     "bbox": [
+      83.06963,
+      26.21939,
+      83.67317,
+      27.11407
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Hamirpur_lulc_v2",
+     "display": "Hamirpur",
+     "bbox": [
+      79.35672,
+      25.47628,
+      80.35293,
+      26.16239
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Hardoi_lulc_v2",
+     "display": "Hardoi",
+     "bbox": [
+      79.68566,
+      26.88951,
+      80.82861,
+      27.78297
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Hathras_lulc_v2",
+     "display": "Hathras",
+     "bbox": [
+      77.87513,
+      27.29858,
+      78.52838,
+      27.84746
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Jalaun_lulc_v2",
+     "display": "Jalaun",
+     "bbox": [
+      78.93353,
+      25.76609,
+      79.95594,
+      26.44236
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Jaunpur_lulc_v2",
+     "display": "Jaunpur",
+     "bbox": [
+      82.12437,
+      25.39227,
+      83.09211,
+      26.20243
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Jhansi_lulc_v2",
+     "display": "Jhansi",
+     "bbox": [
+      78.30185,
+      25.10711,
+      79.42147,
+      25.95246
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Jyotiba_Phule_Nagar_lulc_v2",
+     "display": "Jyotiba Phule Nagar",
+     "bbox": [
+      78.05039,
+      28.4259,
+      78.64978,
+      29.08259
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Kannauj_lulc_v2",
+     "display": "Kannauj",
+     "bbox": [
+      79.31766,
+      26.76936,
+      80.02344,
+      27.22885
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Kanpur_Dehat_lulc_v2",
+     "display": "Kanpur Dehat",
+     "bbox": [
+      79.50729,
+      26.08982,
+      80.19135,
+      26.82718
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Kanpur_Nagar_lulc_v2",
+     "display": "Kanpur Nagar",
+     "bbox": [
+      79.89209,
+      25.91938,
+      80.59309,
+      26.96308
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Kansi_Ram_Nagar_lulc_v2",
+     "display": "Kansi Ram Nagar",
+     "bbox": [
+      78.4727,
+      27.54596,
+      79.21909,
+      28.02788
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Kaushambi_lulc_v2",
+     "display": "Kaushambi",
+     "bbox": [
+      81.14837,
+      25.25796,
+      81.70026,
+      25.81037
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Kushinagar_lulc_v2",
+     "display": "Kushinagar",
+     "bbox": [
+      83.52627,
+      26.5501,
+      84.42204,
+      27.297
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Lakhimpur_lulc_v2",
+     "display": "Lakhimpur",
+     "bbox": [
+      80.0319,
+      27.67541,
+      81.30703,
+      28.69119
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Lalitpur_lulc_v2",
+     "display": "Lalitpur",
+     "bbox": [
+      78.17017,
+      24.17639,
+      78.99364,
+      25.22441
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Lucknow_lulc_v2",
+     "display": "Lucknow",
+     "bbox": [
+      80.56216,
+      26.5035,
+      81.21931,
+      27.15842
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Maharajganj_lulc_v2",
+     "display": "Maharajganj",
+     "bbox": [
+      83.12171,
+      26.88839,
+      83.93655,
+      27.47915
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Mahoba_lulc_v2",
+     "display": "Mahoba",
+     "bbox": [
+      79.27498,
+      25.03173,
+      80.22786,
+      25.64285
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Mainpuri_lulc_v2",
+     "display": "Mainpuri",
+     "bbox": [
+      78.68986,
+      26.94647,
+      79.44001,
+      27.47289
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Mathura_lulc_v2",
+     "display": "Mathura",
+     "bbox": [
+      77.2826,
+      27.23309,
+      77.99062,
+      27.96106
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Mau_lulc_v2",
+     "display": "Mau",
+     "bbox": [
+      83.29537,
+      25.79694,
+      83.81282,
+      26.27698
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Meerut_lulc_v2",
+     "display": "Meerut",
+     "bbox": [
+      77.42597,
+      28.75794,
+      78.12495,
+      29.2661
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Mirzapur_lulc_v2",
+     "display": "Mirzapur",
+     "bbox": [
+      82.08196,
+      24.59151,
+      83.18362,
+      25.27157
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Moradabad_lulc_v2",
+     "display": "Moradabad",
+     "bbox": [
+      78.52061,
+      28.48765,
+      79.00222,
+      29.26786
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Muzzafarnagar_lulc_v2",
+     "display": "Muzaffarnagar",
+     "bbox": [
+      77.24696,
+      29.18478,
+      78.11626,
+      29.71512
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Panchshil_Nagar_lulc_v2",
+     "display": "Panchshil Nagar",
+     "bbox": [
+      77.54643,
+      28.54967,
+      78.20039,
+      28.88346
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Pilibhit_lulc_v2",
+     "display": "Pilibhit",
+     "bbox": [
+      79.62275,
+      28.10054,
+      80.45172,
+      28.88761
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Prabudhinagar_lulc_v2",
+     "display": "Prabudhinagar",
+     "bbox": [
+      77.0962,
+      29.27499,
+      77.50267,
+      29.69703
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Pratapgarh_lulc_v2",
+     "display": "Pratapgarh",
+     "bbox": [
+      81.32652,
+      25.57189,
+      82.43601,
+      26.18038
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Rae_Bareli_lulc_v2",
+     "display": "Raebareli",
+     "bbox": [
+      80.67153,
+      25.81037,
+      81.45115,
+      26.6064
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Rampur_lulc_v2",
+     "display": "Rampur",
+     "bbox": [
+      78.85974,
+      28.41736,
+      79.42933,
+      29.16831
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Saharanpur_lulc_v2",
+     "display": "Saharanpur",
+     "bbox": [
+      77.12367,
+      29.5647,
+      77.96271,
+      30.40598
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Sant_Kabir_Nagar_lulc_v2",
+     "display": "Sant Kabir Nagar",
+     "bbox": [
+      82.82523,
+      26.40786,
+      83.2286,
+      27.10201
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Sant_Ravi_Das_Nagar_(Bhadohi)_lulc_v2",
+     "display": "Sant Ravi Das Nagar (Bhadohi)",
+     "bbox": [
+      82.19741,
+      25.17783,
+      82.71251,
+      25.53623
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Shahjahanpur_lulc_v2",
+     "display": "Shahjahanpur",
+     "bbox": [
+      79.32446,
+      27.44493,
+      80.37795,
+      28.38103
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Shrawasti_lulc_v2",
+     "display": "Shrawasti",
+     "bbox": [
+      81.60328,
+      27.40464,
+      82.2076,
+      27.963
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Siddharth_Nagar_lulc_v2",
+     "display": "Siddharth Nagar",
+     "bbox": [
+      82.44028,
+      26.99108,
+      83.29491,
+      27.50268
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Sitapur_lulc_v2",
+     "display": "Sitapur",
+     "bbox": [
+      80.30072,
+      27.09921,
+      81.41836,
+      27.9062
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Sonbhadra_lulc_v2",
+     "display": "Sonbhadra",
+     "bbox": [
+      82.5253,
+      23.86854,
+      83.54998,
+      24.94205
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Sultanpur_lulc_v2",
+     "display": "Sultanpur",
+     "bbox": [
+      81.80771,
+      25.97354,
+      82.69432,
+      26.51441
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Unnao_lulc_v2",
+     "display": "Unnao",
+     "bbox": [
+      80.04581,
+      26.10325,
+      81.05348,
+      27.03097
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UP_Varanasi_lulc_v2",
+     "display": "Varanasi",
+     "bbox": [
+      82.66851,
+      25.16397,
+      83.19015,
+      25.57988
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "UK",
+   "name": "Uttarakhand",
+   "state_layers": [
+    {
+     "layer": "basemap:UK_LULC",
+     "label": null,
+     "bbox": [
+      77.57539,
+      28.71521,
+      80.8998,
+      31.24777
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:UK_Almora_lulc_v2",
+     "display": "Almora",
+     "bbox": [
+      79.03673,
+      29.42609,
+      80.07261,
+      29.98255
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UK_Bageshwer_lulc_v2",
+     "display": "Bageshwar",
+     "bbox": [
+      79.47001,
+      29.68453,
+      80.1605,
+      30.31711
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UK_Chamoli_lulc_v2",
+     "display": "Chamoli",
+     "bbox": [
+      79.0498,
+      29.92479,
+      80.25893,
+      31.07436
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UK_Champawat_lulc_v2",
+     "display": "Champawat",
+     "bbox": [
+      79.79977,
+      29.05254,
+      80.32115,
+      29.52374
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UK_Dehradun_lulc_v2",
+     "display": "Dehradun",
+     "bbox": [
+      77.57436,
+      29.9637,
+      78.31169,
+      30.99583
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UK_Haridwar_lulc_v2",
+     "display": "Haridwar",
+     "bbox": [
+      77.71419,
+      29.54015,
+      78.34451,
+      30.24561
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UK_Nainital_lulc_v2",
+     "display": "Nainital",
+     "bbox": [
+      78.87772,
+      28.9865,
+      79.97729,
+      29.6128
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UK_Pauri_lulc_v2",
+     "display": "Pauri",
+     "bbox": [
+      78.17944,
+      29.43498,
+      79.23405,
+      30.26146
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UK_Pithoragarh_lulc_v2",
+     "display": "Pithoragarh",
+     "bbox": [
+      79.82245,
+      29.44338,
+      81.04295,
+      30.80785
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UK_Rudraprayag_lulc_v2",
+     "display": "Rudraprayag",
+     "bbox": [
+      78.81421,
+      30.17547,
+      79.35735,
+      30.80679
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UK_Tehri_lulc_v2",
+     "display": "Tehri",
+     "bbox": [
+      77.93744,
+      30.0487,
+      79.03567,
+      30.87839
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UK_Udham_Singh_Nagar_lulc_v2",
+     "display": "Udham Singh Nagar",
+     "bbox": [
+      78.71999,
+      28.74979,
+      80.08123,
+      29.3689
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:UK_Uttarkashi_lulc_v2",
+     "display": "Uttarkashi",
+     "bbox": [
+      77.82352,
+      30.46836,
+      79.42619,
+      31.47965
+     ],
+     "queryable": true
+    }
+   ]
+  },
+  {
+   "code": "WB",
+   "name": "West Bengal",
+   "state_layers": [
+    {
+     "layer": "basemap:WB_LULC",
+     "label": null,
+     "bbox": [
+      85.82649,
+      21.48086,
+      89.88564,
+      27.22019
+     ],
+     "queryable": true,
+     "scale_hint_max": 17500000.0
+    }
+   ],
+   "districts": [
+    {
+     "layer": "sisdpv2:WB_Bankura_lulc_v2",
+     "display": "Bankura",
+     "bbox": [
+      86.60902,
+      22.62633,
+      87.76471,
+      23.63835
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:WB_Bardhman_lulc_v2",
+     "display": "Barddhaman",
+     "bbox": [
+      86.80146,
+      22.93246,
+      88.41428,
+      23.88182
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:WB_Birbhum_lulc_v2",
+     "display": "Birbhum",
+     "bbox": [
+      87.0881,
+      23.54058,
+      88.02461,
+      24.58349
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:WB_Coochbihar_lulc_v2",
+     "display": "Cooch Behar",
+     "bbox": [
+      88.74773,
+      25.9659,
+      89.86379,
+      26.54556
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:WB_Dakshin_Dinajpur_lulc_v2",
+     "display": "Dakshin Dinajpur",
+     "bbox": [
+      88.16262,
+      25.16678,
+      89.00886,
+      25.60848
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:WB_Darjeeling_lulc_v2",
+     "display": "Darjeeling",
+     "bbox": [
+      87.99146,
+      26.4518,
+      88.88121,
+      27.22019
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:WB_East_Maedinipur_lulc_v2",
+     "display": "East Medinipur",
+     "bbox": [
+      87.42702,
+      21.61264,
+      88.2072,
+      22.51037
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:WB_Hooghly_lulc_v2",
+     "display": "Hooghly",
+     "bbox": [
+      87.50639,
+      22.59523,
+      88.51042,
+      23.22503
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:WB_Howrah_lulc_v2",
+     "display": "Howrah",
+     "bbox": [
+      87.8425,
+      22.20508,
+      88.36577,
+      22.78308
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:WB_Jalpaiguri_lulc_v2",
+     "display": "Jalpaiguri",
+     "bbox": [
+      88.57325,
+      26.3766,
+      89.87685,
+      26.9931
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:WB_Kolkata_lulc_v2",
+     "display": "Kolkata",
+     "bbox": [
+      88.23386,
+      22.45094,
+      88.45825,
+      22.63245
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:WB_Malda_lulc_v2",
+     "display": "Malda",
+     "bbox": [
+      87.76606,
+      24.66118,
+      88.46396,
+      25.53863
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:WB_Murshidabad_lulc_v2",
+     "display": "Murshidabad",
+     "bbox": [
+      87.82207,
+      23.72252,
+      88.73509,
+      24.85544
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:WB_Nadia_lulc_v2",
+     "display": "Nadia",
+     "bbox": [
+      88.13396,
+      22.8757,
+      88.80192,
+      24.10718
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:WB_North_24_Parganas_lulc_v2",
+     "display": "North 24 Parganas",
+     "bbox": [
+      88.33113,
+      22.12117,
+      89.09943,
+      23.25051
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:WB_Puruliya_lulc_v2",
+     "display": "Puruliya",
+     "bbox": [
+      85.82225,
+      22.70519,
+      86.90573,
+      23.69841
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:WB_South_24_Parganas_lulc_v2",
+     "display": "South 24 Parganas",
+     "bbox": [
+      88.03967,
+      21.51875,
+      89.11394,
+      22.62483
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:WB_Uttar_Dinajpur_lulc_v2",
+     "display": "Uttar Dinajpur",
+     "bbox": [
+      87.80984,
+      25.24436,
+      88.52548,
+      26.49683
+     ],
+     "queryable": true
+    },
+    {
+     "layer": "sisdpv2:WB_West_Medinipur_lulc_v2",
+     "display": "West Medinipur",
+     "bbox": [
+      86.55882,
+      21.76479,
+      87.89077,
+      22.95546
+     ],
+     "queryable": true
+    }
+   ]
+  }
+ ]
+}

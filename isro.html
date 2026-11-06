@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ISRO Visualiser: Phase 0 feasibility test</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@9.2.4/ol.css">
+<style>
+  :root { --bg:#fff; --fg:#1a1a1a; --muted:#666; --panel:#f4f4f5; --line:#d4d4d8; --ok:#15803d; --bad:#b91c1c; --warn:#b45309; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#111; --fg:#eee; --muted:#9ca3af; --panel:#1c1c1f; --line:#3f3f46; --ok:#4ade80; --bad:#f87171; --warn:#fbbf24; }
+  }
+  * { box-sizing: border-box; }
+  html, body { height:100%; margin:0; background:var(--bg); color:var(--fg); font:14px/1.4 system-ui, sans-serif; }
+  body { display:flex; flex-direction:column; }
+  header { padding:8px 12px; background:var(--panel); border-bottom:1px solid var(--line); display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; }
+  header h1 { font-size:15px; margin:0; }
+  select, button, input { font:inherit; color:var(--fg); background:var(--bg); border:1px solid var(--line); border-radius:6px; padding:4px 8px; }
+  button { cursor:pointer; }
+  main { flex:1; display:flex; min-height:0; }
+  #map { flex:1; min-width:0; }
+  aside { width:380px; max-width:45%; border-left:1px solid var(--line); background:var(--panel); display:flex; flex-direction:column; min-height:0; }
+  aside h2 { font-size:13px; margin:0; padding:8px 10px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; }
+  #log { flex:1; overflow:auto; margin:0; padding:10px; white-space:pre-wrap; word-break:break-word; font:12px/1.45 ui-monospace, Menlo, Consolas, monospace; }
+  .ok { color:var(--ok); } .bad { color:var(--bad); } .warn { color:var(--warn); } .muted { color:var(--muted); }
+  #stats { font-size:12px; color:var(--muted); }
+  .attr { position:absolute; left:6px; bottom:6px; background:rgba(255,255,255,.85); color:#222; padding:2px 6px; font-size:11px; border-radius:4px; z-index:5; }
+  @media (max-width:700px) { main { flex-direction:column; } aside { width:100%; max-width:none; height:45%; border-left:0; border-top:1px solid var(--line); } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Phase 0: Bhuvan WMS feasibility</h1>
+  <label>State <select id="state"></select></label>
+  <label>District <select id="district"></select></label>
+  <label>Opacity <input id="opacity" type="range" min="0" max="1" step="0.05" value="0.8"></label>
+  <button id="btnCors">Run CORS checks</button>
+  <button id="btnCopy">Copy report</button>
+  <span id="stats"></span>
+</header>
+<main>
+  <div id="map" style="position:relative"><div class="attr">Bhuvan, National Remote Sensing Centre, ISRO, Government of India | &copy; OpenStreetMap contributors</div></div>
+  <aside>
+    <h2><span>Test log (click the map too)</span><button id="btnClear">Clear</button></h2>
+    <pre id="log"></pre>
+  </aside>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/ol@9.2.4/dist/ol.js"></script>
+<script>
+(function () {
+  "use strict";
+  var logEl = document.getElementById("log");
+  var report = [];
+  function log(msg, cls) {
+    var line = document.createElement("div");
+    if (cls) line.className = cls;
+    line.textContent = msg;
+    logEl.appendChild(line);
+    logEl.scrollTop = logEl.scrollHeight;
+    report.push(msg);
+  }
+  document.getElementById("btnClear").onclick = function () { logEl.textContent = ""; report = []; };
+  document.getElementById("btnCopy").onclick = function () {
+    var text = report.join("\n");
+    var done = function () { log("[report copied to clipboard]", "muted"); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, function () { window.prompt("Copy this:", text); });
+    else window.prompt("Copy this:", text);
+  };
+
+  var catalog = null, wmsUrl = "https://bhuvan-vec1.nrsc.gov.in/bhuvan/wms", currentLayerName = null;
+  var counts = { start: 0, ok: 0, err: 0 };
+  var statsEl = document.getElementById("stats");
+  function stats() { statsEl.textContent = "tiles: " + counts.ok + " ok / " + counts.err + " failed / " + counts.start + " requested"; }
+
+  // Base map
+  var osm = new ol.layer.Tile({ source: new ol.source.OSM({ attributions: [] }) });
+  var map = new ol.Map({
+    target: "map",
+    layers: [osm],
+    view: new ol.View({ center: ol.proj.fromLonLat([76.95, 8.5]), zoom: 9 }),
+    controls: ol.control.defaults.defaults({ attribution: false })
+  });
+
+  var wmsLayer = null, wmsSource = null;
+  function setLayer(layerName, bbox) {
+    currentLayerName = layerName;
+    if (wmsLayer) map.removeLayer(wmsLayer);
+    wmsSource = new ol.source.TileWMS({
+      url: wmsUrl,
+      params: { LAYERS: layerName, VERSION: "1.1.1", FORMAT: "image/png", TRANSPARENT: true, TILED: true },
+      serverType: "geoserver",
+      transition: 0
+    });
+    wmsSource.on("tileloadstart", function () { counts.start++; stats(); });
+    wmsSource.on("tileloadend", function () { counts.ok++; stats(); });
+    wmsSource.on("tileloaderror", function () { counts.err++; stats(); });
+    wmsLayer = new ol.layer.Tile({ source: wmsSource, opacity: parseFloat(document.getElementById("opacity").value) });
+    map.addLayer(wmsLayer);
+    counts = { start: 0, ok: 0, err: 0 }; stats();
+    log("Layer set: " + layerName, "muted");
+    if (bbox) {
+      var ext = ol.proj.transformExtent(bbox, "EPSG:4326", "EPSG:3857");
+      map.getView().fit(ext, { padding: [20, 20, 20, 20], duration: 300 });
+    }
+  }
+
+  document.getElementById("opacity").oninput = function (e) { if (wmsLayer) wmsLayer.setOpacity(parseFloat(e.target.value)); };
+
+  // Catalogue-driven pickers
+  var stateSel = document.getElementById("state"), distSel = document.getElementById("district");
+  var items = [];
+  function fillDistricts() {
+    var st = catalog.states[stateSel.value];
+    items = [];
+    st.state_layers.forEach(function (sl) {
+      items.push({ display: "Whole state" + (sl.label ? ": " + sl.label : ""), layer: sl.layer, bbox: sl.bbox });
+    });
+    st.districts.forEach(function (d) { items.push({ display: d.display, layer: d.layer, bbox: d.bbox }); });
+    distSel.innerHTML = "";
+    items.forEach(function (it, i) {
+      var o = document.createElement("option"); o.value = i; o.textContent = it.display; distSel.appendChild(o);
+    });
+    // Prefer the first district when there is one, else the state-level layer
+    if (st.districts.length) distSel.value = st.state_layers.length;
+    pickDistrict();
+  }
+  function pickDistrict() {
+    var it = items[distSel.value];
+    if (it) setLayer(it.layer, it.bbox);
+  }
+  stateSel.onchange = fillDistricts;
+  distSel.onchange = pickDistrict;
+
+  fetch("data/catalog.json").then(function (r) { return r.json(); }).then(function (c) {
+    catalog = c; wmsUrl = c.wms_url || wmsUrl;
+    var kerala = 0;
+    c.states.forEach(function (s, i) {
+      var o = document.createElement("option"); o.value = i; o.textContent = s.name + (s.districts.length ? "" : " (state-level only)"); stateSel.appendChild(o);
+      if (s.code === "KL") kerala = i;
+    });
+    stateSel.value = kerala;
+    fillDistricts();
+    log("Catalogue loaded: " + c.states.length + " entries. Page origin: " + location.origin, "muted");
+    log("Test 1 (tiles): if the coloured land-cover shows over the map, plain image display works.", "muted");
+    log("Test 2 (click): click the map to try GetFeatureInfo in several formats.", "muted");
+  }).catch(function (e) {
+    log("Could not load data/catalog.json: " + e + "\n(Open via GitHub Pages or a local web server, not file://)", "bad");
+  });
+
+  // GetFeatureInfo test on click
+  var formats = ["text/plain", "application/json", "text/html", "application/vnd.ogc.gml"];
+  map.on("singleclick", function (evt) {
+    if (!wmsSource) return;
+    var ll = ol.proj.toLonLat(evt.coordinate);
+    log("\n--- Click " + ll[1].toFixed(5) + ", " + ll[0].toFixed(5) + " | layer " + currentLayerName, "muted");
+    var view = map.getView();
+    formats.forEach(function (fmt) {
+      var url = wmsSource.getFeatureInfoUrl(evt.coordinate, view.getResolution(), view.getProjection(), { INFO_FORMAT: fmt, FEATURE_COUNT: 5 });
+      if (!url) { log("[" + fmt + "] no URL built (outside layer?)", "warn"); return; }
+      fetch(url, { mode: "cors" }).then(function (r) {
+        var ct = r.headers.get("content-type") || "?";
+        return r.text().then(function (t) {
+          log("[" + fmt + "] HTTP " + r.status + " | " + ct + " | " + t.length + " chars", r.ok ? "ok" : "bad");
+          log("   " + t.replace(/\s+/g, " ").slice(0, 300));
+        });
+      }).catch(function (e) {
+        log("[" + fmt + "] FAILED: " + e + "  -> most likely blocked by CORS (or network error)", "bad");
+      });
+    });
+  });
+
+  // CORS checks that don't depend on a click
+  function corsChecks() {
+    log("\n=== CORS checks (origin " + location.origin + ") ===", "muted");
+    var name = currentLayerName || "sisdpv2:KL_Thiruvananthapuram_lulc_v2";
+    var getMap = wmsUrl + "?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=" + encodeURIComponent(name) +
+      "&STYLES=&FORMAT=image/png&TRANSPARENT=true&SRS=EPSG:4326&WIDTH=256&HEIGHT=256&BBOX=76.6,8.3,77.2,8.9";
+    var legend = wmsUrl + "?request=GetLegendGraphic&version=1.1.1&format=image%2Fpng&width=20&height=20&layer=" + encodeURIComponent(name);
+    function probe(label, url) {
+      fetch(url, { mode: "cors" }).then(function (r) {
+        log(label + ": HTTP " + r.status + " | " + (r.headers.get("content-type") || "?") +
+            " | ACAO header: " + (r.headers.get("access-control-allow-origin") || "(none visible)"), r.ok ? "ok" : "bad");
+      }).catch(function (e) { log(label + ": FAILED: " + e + "  -> CORS blocked or network error", "bad"); });
+    }
+    probe("GetMap via fetch()", getMap);
+    probe("GetLegendGraphic via fetch()", legend);
+    // Plain <img> load never needs CORS
+    var img = new Image();
+    img.onload = function () { log("GetLegendGraphic via <img>: loaded " + img.naturalWidth + "x" + img.naturalHeight, "ok"); };
+    img.onerror = function () { log("GetLegendGraphic via <img>: failed to load", "bad"); };
+    img.src = legend;
+  }
+  document.getElementById("btnCors").onclick = corsChecks;
+})();
+</script>
+</body>
+</html>

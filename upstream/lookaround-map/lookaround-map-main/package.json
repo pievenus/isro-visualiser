@@ -1,0 +1,45 @@
+{
+  "name": "lookaround-map",
+  "version": "1.0.0",
+  "description": "A FOSS web viewer for Apple Look Around",
+  "type": "module",
+  "main": "rollup.config.js",
+  "dependencies": {
+    "@photo-sphere-viewer/compass-plugin": "5.14.3",
+    "@photo-sphere-viewer/core": "5.14.3",
+    "@photo-sphere-viewer/markers-plugin": "5.14.3",
+    "@rollup/plugin-commonjs": "^29.0.3",
+    "@rollup/plugin-terser": "^1.0.0",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "d3": "^7.9.0",
+    "google-protobuf": "^4.0.3",
+    "js-base64": "^3.9.4",
+    "ol": "^10.10.0",
+    "ol-contextmenu": "^6.0.1",
+    "ol-ext": "^4.0.38",
+    "ol-layerswitcher": "^4.1.2",
+    "rollup": "^4.63.5",
+    "rollup-plugin-import-css": "^4.2.1",
+    "three": "^0.186.1",
+    "tiny-debounce": "^0.1.1",
+    "tslib": "^2.8.1",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "eslint": "^10.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sk-zk/lookaround-map.git"
+  },
+  "author": "skzk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sk-zk/lookaround-map/issues"
+  },
+  "homepage": "https://github.com/sk-zk/lookaround-map#readme"
+}

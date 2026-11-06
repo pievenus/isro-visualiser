@@ -1,0 +1,7 @@
+states/UTs: 36
+district layers: 637
+state-level layers: 40
+states with districts but no state-level layer: ['TS']
+states with state-level only: ['AN', 'CH']
+non-queryable district layers: []
+problems: none

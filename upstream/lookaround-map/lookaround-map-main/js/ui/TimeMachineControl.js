@@ -1,0 +1,112 @@
+import { getUserLocale } from "../util/misc.js";
+import { CameraType } from "../enums.js";
+import { inferCameraType } from "../util/misc.js";
+
+export class TimeMachineControl {
+  panoSelectedCallback = function () {};
+
+  #alternativeDates = [];
+  #timeMachineMenu;
+  #parent;
+  #container;
+  #isOpen;
+  #date;
+
+  constructor() {
+    this.#date = document.querySelector("#pano-date");
+    this.#timeMachineMenu = document.querySelector("#time-machine-menu");
+    this.#parent = document.querySelector("#pano-date-and-time-machine-menu-container");
+    this.#container = document.querySelector("#time-machine");
+
+    document.addEventListener("click", (e) => {
+      if (e.target.className === "time-machine-button" && !this.#isOpen) {
+        this.open();
+      } else {
+        this.close();
+      }
+    });
+  }
+
+  setPano(pano) {
+    const date = new Date(pano.timestamp);
+    const formattedDate = new Intl.DateTimeFormat(getUserLocale(), {
+      dateStyle: "medium",
+      timeStyle: "medium",
+      timeZone: pano.timezone,
+    }).format(date);
+
+    const camType = inferCameraType(pano);
+    const camHtml = this.#getCameraTypeHtml(camType);
+
+    this.#date.innerHTML = formattedDate + camHtml;
+  }
+
+  setAlternativeDates(dates) {
+    this.#alternativeDates = dates;
+    if (dates.length > 0) {
+      this.#container.className = "time-machine-has-other-dates";
+    } else {
+      this.#container.className = "";
+    }
+  }
+
+  open() {
+    if (this.#alternativeDates.length === 0) return;
+
+    this.#timeMachineMenu.innerHTML = "";
+    for (const pano of this.#alternativeDates) {
+      const formattedDate = new Intl.DateTimeFormat(getUserLocale(), {
+        dateStyle: "medium",
+        timeStyle: "medium",
+        timeZone: pano.timezone,
+      }).format(new Date(pano.timestamp));
+
+      const camType = inferCameraType(pano);
+      const camHtml = this.#getCameraTypeHtml(camType);
+
+      const option = document.createElement("div");
+      option.innerHTML = formattedDate + camHtml;
+      option.className = "time-machine-option";
+      option.addEventListener("click", (_) => {
+        this.close();
+        this.panoSelectedCallback(pano);
+      });
+      this.#timeMachineMenu.appendChild(option);
+    }
+
+    this.#timeMachineMenu.style.display = "block";
+    this.#timeMachineMenu.style.width = this.#parent.clientWidth + "px";
+    this.#isOpen = true;
+  }
+
+  close() {
+    this.#timeMachineMenu.style.display = "none";
+    this.#isOpen = false;
+  }
+
+  #getCameraTypeHtml(type) {
+    let icon, titleText;
+    switch (type) {
+      default:
+      case CameraType.BigCam:
+        icon = "bigcam";
+        titleText = "Gen 1 car camera";
+        break;
+      case CameraType.SmallCam:
+        icon = "smallcam";
+        titleText = "Gen 2 car camera";
+        break;
+      case CameraType.LowCam:
+        titleText = "Gen 1 car camera; CH variant";
+        icon = "lowcam";
+        break;
+      case CameraType.Backpack:
+        titleText = "Backpack camera";
+        icon = "backpack";
+        break;
+    }
+    return `&nbsp;&nbsp;&nbsp;<div class="pano-info-camera-icon" title="${titleText}">
+              <span class="sprites sprites-${icon}"></span>
+            </div>`;
+  }
+}

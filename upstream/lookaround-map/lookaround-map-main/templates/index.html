@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Apple Look Around Viewer</title>
+
+  <link rel="icon" type="image/png" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/static/dist/main.css">
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=inter:300,600" rel="stylesheet" />
+  
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, width=device-width" />
+
+  <meta property="og:title" content="Apple Look Around Viewer" />
+  <meta property="og:description" content="A FOSS web viewer for Apple Look Around" />
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <div id="color-legend">
+    <div id="color-legend-colors"></div>
+    <div id="color-legend-axis"></div>
+  </div>
+
+  <div id="pano"></div>
+
+  <div id="pano-info">
+    <details id="pano-info-details" open>
+    <summary>
+      <svg class="pano-info-hamburger" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>View more</title><g data-name="Layer 2"><g data-name="menu"><rect fill="#fff" width="24" height="24" transform="rotate(180 12 12)" opacity="0"/><rect fill="#fff" x="3" y="11" width="18" height="2" rx=".95" ry=".95"/><rect fill="#fff" x="3" y="16" width="18" height="2" rx=".95" ry=".95"/><rect fill="#fff" x="3" y="6" width="18" height="2" rx=".95" ry=".95"/></g></g></svg>
+      <span id="pano-address-first-line"></span>
+      <div id="pano-info-buttons">
+        <a href="javascript:void(0);" id="pano-screenshot">
+          <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Take a screenshot</title><g data-name="Layer 2"><g data-name="camera"><rect fill="#fff" width="24" height="24" opacity="0"/><circle fill="#fff" cx="12" cy="14" r="1.5"/><path fill="#fff" d="M19 7h-3V5.5A2.5 2.5 0 0 0 13.5 3h-3A2.5 2.5 0 0 0 8 5.5V7H5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-8a3 3 0 0 0-3-3zm-9-1.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V7h-4zm2 12a3.5 3.5 0 1 1 3.5-3.5 3.5 3.5 0 0 1-3.5 3.5z"/></g></g></svg>
+        </a>
+        <a href="javascript:void(0);" id="pano-share">
+          <svg width="20" height="20" title="Share this location" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Share this location</title><g data-name="Layer 2"><g data-name="link-2"><rect width="24" height="24" opacity="0"/><path fill="#fff" d="M13.29 9.29l-4 4a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4-4a1 1 0 0 0-1.42-1.42z"/><path fill="#fff" d="M12.28 17.4L11 18.67a4.2 4.2 0 0 1-5.58.4 4 4 0 0 1-.27-5.93l1.42-1.43a1 1 0 0 0 0-1.42 1 1 0 0 0-1.42 0l-1.27 1.28a6.15 6.15 0 0 0-.67 8.07 6.06 6.06 0 0 0 9.07.6l1.42-1.42a1 1 0 0 0-1.42-1.42z"/><path fill="#fff" d="M19.66 3.22a6.18 6.18 0 0 0-8.13.68L10.45 5a1.09 1.09 0 0 0-.17 1.61 1 1 0 0 0 1.42 0L13 5.3a4.17 4.17 0 0 1 5.57-.4 4 4 0 0 1 .27 5.95l-1.42 1.43a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l1.42-1.42a6.06 6.06 0 0 0-.6-9.06z"/></g></g></svg>
+        </a>
+      </div>
+    </summary>
+    <div id="pano-address-rest"></div>
+    <div id="pano-metadata">
+      <div id="time-machine">
+        <svg width="16" height="16" class="time-machine-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="clock"><rect width="24" height="24" transform="rotate(180 12 12)" opacity="0"/><path fill="#eee" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm4 11h-4a1 1 0 0 1-1-1V8a1 1 0 0 1 2 0v3h3a1 1 0 0 1 0 2z"/></g></g></svg>
+        <div id="pano-date-and-time-machine-menu-container">
+          <span id="pano-date" class="time-machine-button"></span>
+          <div id="time-machine-menu"></div>
+        </div>
+      </div>
+      <div id="pano-technical-container">
+        <span class="pano-technical-desc">Pano ID: </span><span id="pano-id"></span>
+        <span class="pano-technical-desc">Build ID: </span><span id="pano-build-id"></span>
+        <span class="pano-technical-desc">Position: </span><span id="pano-pos"></span>
+        <span class="pano-technical-desc">Height: </span><span id="pano-ele"></span>
+      </div>
+      <div id="dbg"></div>
+      <div>Open in <a href="javascript:void(0);" id="open-in-gsv">Google Street View</a> | <a href="javascript:void(0);" id="open-in-apple-maps">Apple Maps</a></div>
+    </div>
+  </details>
+  </div>
+
+  <button id="close-pano" type="button">
+    <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Close panorama</title><g data-name="Layer 2"><g data-name="close"><rect width="24" height="24" transform="rotate(180 12 12)" opacity="0"/><path fill="#fff" d="M13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"/></g></g></svg>
+  </button>
+
+  <div id="sidebar-container">
+    <button id="sidebar-toggle" class="sidebar-toggle-closed"></button>
+    <div id="sidebar">
+      <div id="sidebar-elements">
+        <div class="sidebar-tabs">
+          <input class="sidebar-tab" name="tabs" tabindex="1" type="radio" id="tab-layers" checked>
+          <label class="sidebar-tab-label tab-layers-bg" for="tab-layers" title="Layers"></label>
+          <div class="sidebar-panel" tabindex="1">
+          <h2>Layers</h2>
+          <div id="sidebar-layers-insert" class="layer-switcher"></div>
+          </div>
+  
+          <input class="sidebar-tab" name="tabs" tabindex="1" type="radio" id="tab-filters">
+          <label class="sidebar-tab-label tab-filters-bg" for="tab-filters" title="Filters"></label>
+          <div class="sidebar-panel" tabindex="1">
+          <h2>Filters</h2>
+          <div class="sidebar-control-group">
+            <h3>Coverage type</h3>
+            <input type="checkbox" id="show-cars" name="show-cars" checked><label for="show-cars">Show car footage</label><br>
+            <input type="checkbox" id="show-trekkers" name="show-trekkers" checked><label for="show-trekkers">Show trekker
+              footage</label>
+            </div>
+            <div class="sidebar-control-group">
+              <h3>Line/circle color</h3>
+                <input type="radio" id="color-by-type" name="line-color" checked><label for="color-by-type">Coverage type</label><br>
+                <input type="radio" id="color-by-age" name="line-color"><label for="color-by-age">Age</label><br>
+                <input type="radio" id="color-by-build-id" name="line-color"><label for="color-by-build-id">Build ID (z≥16)</label>
+              </div>
+            <div class="sidebar-control-group">
+            <h3>Capture date</h3>
+            <input type="checkbox" id="filter-date" name="filter-date"><label for="filter-date">Filter by date:</label>
+            <table class="first-col-right">
+              <tr>
+                <td>From:</td>
+                <td><input type="date" id="coverage-min-date" name="coverage-min-date" value="2018-06-01"></td>
+              </tr>
+              <tr>
+                <td>To:</td>
+                <td><input type="date" id="coverage-max-date" name="coverage-max-date" value="2026-10-01"></td>
+              </tr>
+            </table>
+            </div>
+            <div class="sidebar-control-group">
+              <h3>Build ID</h3>
+              <input type="checkbox" id="filter-build-id" name="filter-build-id"><label for="filter-build-id">Filter by Build ID (z≥16):</label><br>
+              <input type="text" inputmode="numeric" pattern="\d{9,10}" id="filter-build-id-val" name="filter-build-id-val" style="width:9em;">
+            </div>
+            <div class="sidebar-control-group">
+            <h3>Crop by GeoJSON polygon</h3>
+              <input type="file" id="polygon-filter" />
+              <button id="remove-polygon-filter" style="display:none;">✕</button>
+            </div>
+          </div>
+  
+          <input class="sidebar-tab" name="tabs" tabindex="1" type="radio" id="tab-historical">
+          <label class="sidebar-tab-label tab-historical-bg" for="tab-historical" title="Historical"></label>
+          <div class="sidebar-panel" tabindex="1">
+            <h2>Historical</h2>
+            <div class="sidebar-control-group">
+              <div>
+                <input type="checkbox" id="enable-historical" name="enable-historical"><label for="enable-historical">Show historical coverage layer:</label><br>
+                <input type="date" id="historical-date-a" name="historical-date-a" value="2026-06-01" min="2026-05-25"><br>
+                <div id="historical-date-a-buttons"></div>
+              </div>
+              <p></p>
+              <div>
+                <input type="checkbox" id="enable-diff" name="enable-diff"><label for="enable-diff">Compare to:</label><br>
+                <input type="date" id="historical-date-b" name="historical-date-b" value="2026-07-01" min="2026-05-25"><br>
+                <div id="historical-date-b-buttons"></div>
+              </div>
+            </div>
+            <div class="sidebar-control-group">
+              <p>Here, you can view and compare older versions of this site's custom coverage layer.
+                When comparing two dates, added footage is shown in purple and removed footage is shown in red.</p>
+              <p>NB:</p>
+              <ul class="less-list-padding">
+                <li>This feature does not enable access to older imagery.</li>
+                <li>Changes to this layer reflect the scraping date, not the publication date.</li>
+                <li>The type and date filters on the filter tab apply to this layer as well.</li>
+                <li>Raster levels 3&zwj;&ndash;&zwj;7 and vector levels 3&zwj;&ndash;&zwj;5 are regenerated infrequently, particularly in Europe.
+                  Compare raster 8+ or vector 6+ for best results.
+                </li>
+                <li>The earliest date you can return to is the 25th of May 2026. Note, however, that the archive
+                  was not yet fully populated at this point.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <input class="sidebar-tab" name="tabs" tabindex="1" type="radio" id="tab-settings">
+          <label class="sidebar-tab-label tab-settings-bg" for="tab-settings" title="Settings"></label>
+          <div class="sidebar-panel" tabindex="1">
+          <h2>Settings</h2>
+          <div class="sidebar-control-group">
+            <h3>Theme</h3>
+            <input type="radio" id="theme-auto" name="theme"><label for="theme-auto">Automatic</label><br>
+            <input type="radio" id="theme-light" name="theme"><label for="theme-light">Light</label><br>
+            <input type="radio" id="theme-dark" name="theme"><label for="theme-dark">Dark</label><br>
+          </div>
+          <p></p>
+           <div class="sidebar-control-group">
+            <h3>Language</h3>
+              <label for="data-lang">Label/address language:</label><br>
+              <select id="data-lang" name="data-lang">
+                <option value="default">Browser default</option>
+                <option value="en-US">English</option>
+                <option value="ar">Arabic</option>
+                <option value="bn">Bengali</option>
+                <option value="bg">Bulgarian</option>
+                <option value="ca">Catalan</option>
+                <option value="zh-CN">Chinese (China)</option>
+                <option value="zh-HK">Chinese (Hong Kong)</option>
+                <option value="zh-TW">Chinese (Taiwan)</option>
+                <option value="hr">Croatian</option>
+                <option value="cs">Czech</option>
+                <option value="da">Danish</option>
+                <option value="nl">Dutch</option>
+                <option value="fi">Finnish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="el">Greek</option>
+                <option value="gu">Gujarati</option>
+                <option value="he">Hebrew</option>
+                <option value="hi">Hindi</option>
+                <option value="hu">Hungarian</option>
+                <option value="id">Indonesian</option>
+                <option value="it">Italian</option>
+                <option value="ja">Japanese</option>
+                <option value="kn">Kannada</option>
+                <option value="kk">Kazakh</option>
+                <option value="ko">Korean</option>
+                <option value="lt">Lithuanian</option>
+                <option value="ms">Malay</option>
+                <option value="ml">Malayalam</option>
+                <option value="mr">Marathi</option>
+                <option value="no">Norwegian</option>
+                <option value="pl">Polish</option>
+                <option value="pt">Portuguese</option>
+                <option value="pa">Punjabi</option>
+                <option value="ro">Romanian</option>
+                <option value="ru">Russian</option>
+                <option value="sk">Slovak</option>
+                <option value="sl">Slovenian</option>
+                <option value="es">Spanish</option>
+                <option value="sv">Swedish</option>
+                <option value="ta">Tamil</option>
+                <option value="te">Telugu</option>
+                <option value="th">Thai</option>
+                <option value="tr">Turkish</option>
+                <option value="uk">Ukrainian</option>
+                <option value="ur">Urdu</option>
+                <option value="vi">Vietnamese</option>
+              </select><br>
+              <span class="settings-note">(Not all languages are supported by all providers.)</span>
+          </div>
+          <p></p>
+          <div class="sidebar-control-group">
+            <h3>Map</h3>
+            <input type="checkbox" id="labels-on-top" name="labels-on-top">
+            <label for="labels-on-top">Display labels above lines (if supported by layer)</label><br>
+            <input type="checkbox" id="use-muted" name="use-muted">
+            <label for="use-muted">Use muted Apple Maps tiles</label><br>
+            <input type="checkbox" id="show-tile-modified-date" name="show-tile-modified-date">
+            <label for="show-tile-modified-date">Display last modification date of coverage tiles (z≥16)</label>
+          </div>
+          <p></p>
+          <div class="sidebar-control-group">
+            <h3>Panorama viewer</h3>
+            <p>
+              Initial orientation:<br>
+              <input type="radio" id="spawn-facing-north" name="initial-orientation"><label for="spawn-facing-north">North</label><br>
+              <input type="radio" id="spawn-facing-road" name="initial-orientation"><label for="spawn-facing-road">Direction of travel</label>
+            </p>
+            <input type="checkbox" id="decode-clientside" name="decode-clientside"><label for="decode-clientside">Decode images clientside</label><br>
+          </div>
+          <p></p>
+          <div class="sidebar-control-group">
+            <h3>Address source</h3>
+            <input type="radio" id="addr-apple" name="addr"><label for="addr-apple">Apple</label><br>
+            <input type="radio" id="addr-nominatim" name="addr"><label for="addr-nominatim">OpenStreetMap (Nominatim)</label>
+          </div>
+          </div>
+
+          <input class="sidebar-tab" name="tabs" tabindex="1" type="radio" id="tab-updates">
+          <label class="sidebar-tab-label tab-updates-bg" for="tab-updates" title="What's new?"></label>
+          <div class="sidebar-panel sidebar-panel-updates" tabindex="1">
+            <h2>What's new?</h2>
+            <h3>2026-09-29</h3>
+            <div>There is a new tab for viewing and comparing older versions of this site's custom coverage layer.
+              I've made several minor QoI improvements as well.
+            </div>
+            <h3>2025-10-05</h3>
+            <div>You can now set the language of map tiles and addresses. Note that not all languages are supported
+              by all providers.
+            </div>
+            <h3>2025-06-11</h3>
+            <div>Panoramas are now decoded in the client by default. This should take some load off the public instance
+              of the server, which has been struggling to handle the recent increase in traffic. If this is too slow
+              on your device, you can revert to the server-side JPEG conversion in the settings.
+            </div>
+            <h3>2025-04-19</h3>
+            <div>The metadata box now displays an icon of the camera model which the current panorama was captured with.</div>
+            <h3>2025-02-02</h3>
+            <div>When coloring by age or Build ID, a legend is now displayed in the bottom left corner.</div>
+            <p></p>
+            <details>
+              <summary>show older</summary>
+              <h3>2024-12-11</h3>
+              <div>Look Around finally has an official web viewer! Apple's <a href="https://beta.maps.apple.com/">beta version</a>
+                of their web map added the ability to enter Look Around today.<br>
+                The "Open in Apple Maps" link in the pano details box has been changed to open this web viewer on non-Apple devices.
+              </div>
+              <h3>2024-09-14</h3>
+              <div>You can now view the last modification date of coverage tiles.
+              </div>
+              <h3>2024-05-10</h3>
+              <div>Keyboard movement is now available! Use the arrow keys to move to the closest panorama
+                in that direction.
+              </div>
+              <h3>2024-05-07</h3>
+              <div>Added the ability to enable the muted emphasis versions of Apple Maps base layers.</div>
+              <h3>2024-03-02</h3>
+              <div>HEVC in Firefox on Windows is now working properly. (There is, however, a bug in the underlying
+                WMF codec causing it to decode the image with the wrong color profile, like my
+                code did before December &ndash; we'll have to wait for Microsoft to catch and fix this.)
+              </div>
+              <h3>2024-02-19</h3>
+              <div>Added a smooth transition when moving or when higher resolution faces are loaded in.</div>
+              <h3>2024-01-08</h3>
+              <div>Added the Google Maps Road (Old Style) base layer.</div>
+              <h3>2023-12-29</h3>
+              <div>
+                You can now paste Apple Maps URLs into the search bar to open the linked panorama or,
+                if no panorama is given, to move the map to the linked location.<br>
+                (Supported parameters are <code>ll</code>, <code>z</code>, and <code>_mvs</code>. Other parameters
+                are ignored.)
+              </div>
+              <h3>2023-12-22</h3>
+              <div>Added the ability to filter by Build ID.</div>
+              <h3>2023-12-17</h3>
+              <div>The top and bottom faces of panoramas now render properly.</div>
+              <h3>2023-12-15</h3>
+              <div>
+                If your browser supports HEVC, including the Main Still Picture profile, the viewer now
+                decodes panoramas in the client, which should improve performance in most cases. You can check if
+                your browser supports this particular format <a href="https://sk-zk.github.io/hevc-msp/" target="_blank">on this page</a>.
+                If necessary, you can disable this feature in the settings.
+              </div>
+              <h3>2023-12-06</h3>
+              <div>Fixed a bug in heic2rgb which resulted in panoramas having slightly incorrect colors.</div>
+              <h3>2023-12-03</h3>
+              <div>Added an option for facing the road when opening a panorama.</div>
+              <h3>2023-12-01</h3>
+              <div>Added this section (hope I didn't forget anything major), plus various UI improvements.</div>
+              <h3>2023-11-31</h3>
+              <div>
+                Following the heading update 10 days ago, pitch and roll are now being properly converted and applied as well,
+                meaning that after over a year of bashing my head against this thing, panoramas are finally oriented correctly.
+              </div>
+              <h3>2023-11-30</h3>
+              <div>Fixed the FOV of links generated by the Open in Google Street View feature.</div>
+              <h3>2023-11-21</h3>
+              <div>Fixed the heading conversion.</div>
+              <h3>2023-11-11</h3>
+              <div>Added the ability to save a screenshot of the viewport.</div>
+              <h3>2023-10-27</h3>
+              <div>Fixed the polygon crop feature not working when the low zoom raster layer of the blue lines is displayed.</div>
+              <h3>2023-10-21</h3>
+              <div>Added height above MSL for the pano info box and improved movement.</div>
+              <h3>2023-10-19</h3>
+              <div>
+                I've added a button for generating a link which opens the current panorama with the current view in Apple Maps on Apple devices.
+                In addition, browsers which natively support HEIC (read: Safari 17, exclusively) now skip the JPEG conversion step
+                and load the original HEIC images.
+              </div>
+              <h3>2023-10-17</h3>
+              <div>It is now possible to create shortened URLs for sharing locations on social media.</div>
+              <h3>2023-10-09</h3>
+              <div>You can now zoom to z=20.</div>
+              <h3>2023-10-07</h3>
+              <div>Added a Nominatim search bar and a geolocation button.</div>
+              <h3>2023-09-20</h3>
+              <div>Added the ability to color panorama dots by Build ID.</div>
+              <h3>2023-06-27</h3>
+              <div>Added a high DPI version (2x resolution) of the raster blue line layer.</div>
+              <h3>2023-04-23</h3>
+              <div>Yaw and pitch of the viewport are now included in the URL, and the CARTO Voyager style has been added as a base layer option.</div>
+              <h3>2023-03-31</h3>
+              <div>Google Maps tiles are now localized according to your browser language, and high DPI devices get a high DPI version.</div>
+              <h3>2023-03-29</h3>
+              <div>Apple Maps tiles are now localized according to your browser language.</div>
+              <h3>2023-03-27</h3>
+              <div>Added the option to reverse geocode with Apple rather than Nominatim (OSM).</div>
+              <h3>2023-02-28</h3>
+              <div>Reworked the UI to use a sidebar and added a dark mode.</div>
+              <h3>2023-02-17</h3>
+              <div>It is now possible to enable my sad attempt at rendering the full panorama.</div>
+              <h3>2023-02-14</h3>
+              <div>The Google Street View layer now uses the raster version of the thin lines I recently discovered.</div>
+              <h3>2023-02-12</h3>
+              <div>The panorama viewer can now be closed with ESC.</div>
+              <h3>2023-02-11</h3>
+              <div>For low zoom levels 3 to 7, a raster version of the blue lines is now loaded by default so as to not immediately crash everyone's browser.</div>
+              <h3>2023-02-03</h3>
+              <div>Added the ability to color lines by age.</div>
+              <h3>2022-12-18</h3>
+              <div>Added a date selector menu for locations which have been covered on multiple dates.</div>
+              <h3>2022-12-17</h3>
+              <div>You can now crop the blue line layer with a GeoJSON polygon.</div>
+              <h3>2022-12-12</h3>
+              <div>
+                The app now uses OpenLayers instead of Leaflet, coverage can be filtered by date or type, the capture time of panoramas now has the correct timezone,
+                two CARTO OpenStreetMap layers have been added, and I created a custom blue line layer of Germany, which has since expanded to all covered areas of Look Around
+                and is continuously updated.
+              </div>
+              <h3>2022-12-07</h3>
+              <div>Added a context menu and the ability to open the current panorama in Google Street View.</div>
+              <h3>2022-12-04</h3>
+              <div>Improved load speed of panorama faces with custom conversion module.</div>
+              <h3>2022-09-16</h3>
+              <div>The panorama viewer now fetches the address of the current location from Nominatim (OSM), and Google Street View lines can be displayed for comparison.</div>
+              <h3>2022-08-31</h3>
+              <div>The panorama viewer can now be embedded on its own into other pages.</div>
+              <h3>2022-08-28</h3>
+              <div>Movement has been changed to be more like Google Street View, with nearby locations displayed as X markers.</div>
+              <h3>2022-08-26</h3>
+              <div>Trekker footage is now shown in purple.</div>
+              <h3>2022-08-18</h3>
+              <div>Added a rudimentary heading conversion, the ability to move between panoramas, and a compass.</div>
+              <h3>2022-08-16</h3>
+              <div>The panorama viewer now preserves the current viewport angle when loading a new panorama.</div>
+              <h3>2022-08-14</h3>
+              <div>Added the satellite layer of Apple Maps.</div>
+              <h3>2022-08-09</h3>
+              <div>
+                The center of the map and the coordinates of the panorama shown in the panorama viewer now get added to the URL
+                to make it possible to link to a specific panorama.
+              </div>
+              <h3>2022-08-07</h3>
+              <div>Added OpenStreetMap (osm-carto) layer.</div>
+              <h3>2022-08-04</h3>
+              <div>Panoramas can now be viewed in 360° using the Photo Sphere Viewer library.</div>
+              <h3>2022-07-30</h3>
+              <div>The app now displays the raw panorama faces at the bottom of the screen when selecting a panorama on the map.</div>
+              <h3>2022-07-30</h3>
+              <div>Initial release! In the very beginning, you could see the locations of panoramas by zooming to z=16 or deeper, and that was it.</div>
+            </details>
+          </div>
+        </div>
+        <div id="sidebar-footer">
+          <a href="https://github.com/sk-zk/lookaround-map/" target="_blank">View the source</a> | 
+          <a href="https://github.com/sk-zk/lookaround-map/issues" target="_blank">Report a bug</a></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/dist/main.js" type="module"></script>
+</body>
+
+</html>
